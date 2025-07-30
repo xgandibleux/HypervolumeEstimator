@@ -2,6 +2,12 @@
 #using Statistics
 #using Distributions
 
+# ------------------------------------------------------------
+"""
+    confidence_interval(data::Vector{Float64}; confidence_level::Float64 = 0.95)
+
+compute the confidence interval (not used)
+"""
 function confidence_interval(data::Vector{Float64}; confidence_level::Float64 = 0.95)
     n = length(data)
     mean_val = mean(data)

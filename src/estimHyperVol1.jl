@@ -1,3 +1,8 @@
+#using Distributions
+#using JuMP, GLPK, Gurobi
+#using SpecialFunctions
+
+
 # =============================================================================
 # Estimation of the hypervolume of an instance of a multi-objective 
 # optimization problem without knowing its set of nondominated points.
@@ -8,11 +13,7 @@
 # version optimized - model modified iteratively-
 
 
-#using Distributions
-#using JuMP, GLPK, Gurobi
-#using SpecialFunctions
-
-
+# ------------------------------------------------------------
 """
     ψ(d)
 
@@ -26,7 +27,7 @@ function ψ(d::Int64)
     return [ϕ[i]/ϕnorm for i in 1:d]
 end
 
-
+# ------------------------------------------------------------
 """
     λ(ψ)
 
@@ -36,7 +37,7 @@ function λ(ψ)
     return [1.0/ψ[j] for j in 1:length(ψ)]
 end
 
-
+# ------------------------------------------------------------
 """
     L(p, w, c, rp, λ_ψ)
 
@@ -96,7 +97,7 @@ function L(  solver::DataType,
     return L
 end
 
-
+# ------------------------------------------------------------
 """
     H(p, w, c, rp=[0,0])
 

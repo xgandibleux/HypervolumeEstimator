@@ -1,9 +1,11 @@
 using Printf
-using JuMP, GLPK, Gurobi # for solving MILP
+using JuMP, GLPK         # for solving MILP
+import MultiObjectiveAlgorithms as MOA # for computing the set of nondominated points
 using Distributions      # for computing the weights and CI (home version)
 using SpecialFunctions   # for computing the estimation value
 using HypothesisTests    # for computing the confidence interval (package version)
 using Statistics         # for computing the confidence interval (home version)
+using Plots              # for drawing the figure (evolution of the avg relative error)
 
 include("src/instanceMO01UKP.jl")
 include("src/solveMO01UKP.jl")
@@ -18,13 +20,13 @@ println("-"^80)
 # =============================================================================
 println("Setup the parameters...")
 solver = GLPK.Optimizer
-#solver = HiGHS.Optimizer
-#solver = Gurobi.Optimizer
-n = 5   # number of variables
-o = 2     # number of objectives
+n = 5    # number of variables
+o = 2    # number of objectives
+
 rp = zeros(Int,o)
 listrndWeights = [(100,100), (500,500), (1000,1000), (1500,1500), (2000,2000), (5000,5000), (10000,10000)]
 trials = 20 # number of trials
+
 println("  number of variables  : ", n)
 println("  number of objectives : ", o)
 println("  reference point      : ", rp)
@@ -103,14 +105,9 @@ open(instanceName*".res", "w") do ioAll
         end
         write(ioAll, string("\n"))
 
-
         # -------------------------------------------------------------------------
-        # Confidence_interval with code given by AI
-        #ci = confidence_interval(listH̃)
-
         # Confidence_interval with HypothesisTests package
         CIlow, CIHigh = confint( OneSampleTTest( listH̃ ), level=0.95, tail=:both )
-
 
         # -------------------------------------------------------------------------
         println("\nAnalyze the results...")
@@ -143,7 +140,6 @@ println("\nAll average relative error H̃ = ", allareH̃)
 
 
 listrndWeightsX = [100,500,1000,1500,2000,5000,10000]
-using Plots
 plot(listrndWeightsX, allareH̃, 
     seriestype = :line, 
     marker = :circle,

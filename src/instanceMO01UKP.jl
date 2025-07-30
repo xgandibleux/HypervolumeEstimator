@@ -1,6 +1,9 @@
 # ------------------------------------------------------------
-# Setup a didactic instance of MO-01UKP 
+"""
+    didactic_MO01UKP()
 
+Setup a didactic instance of MO-01UKP 
+"""
 function didactic_MO01UKP()
 
     p = [ 13 10  3 16 12 11  1  9 19 13 ;     # profit 1
@@ -13,8 +16,11 @@ end
 
 
 # ------------------------------------------------------------
-# Generate randomly an instance for the MO-01UKP with c and w uniformly distributed
+"""
+    generate_MO01UKP(n = 10, o = 2, max_ci = 100, max_wi = 30)
 
+Generate randomly an instance for the MO-01UKP with c and w uniformly distributed
+"""
 function generate_MO01UKP(n = 10, o = 2, max_ci = 100, max_wi = 30)
 
     p = rand(1:max_ci,o,n) # c_i \in [1,max_ci]   # profits
@@ -23,6 +29,3 @@ function generate_MO01UKP(n = 10, o = 2, max_ci = 100, max_wi = 30)
                 
     return p, w, c
 end
-
-
-

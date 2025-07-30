@@ -1,10 +1,14 @@
+#using JuMP
+#using GLPK, Gurobi, HiGHS
+#import MultiObjectiveAlgorithms as MOA
+
+
 # ------------------------------------------------------------
-# Solve an instance for the MO-01UKP 
+"""
+    solve_MO01UKP(solver, p, w, c)
 
-using JuMP
-using GLPK, Gurobi, HiGHS
-import MultiObjectiveAlgorithms as MOA
-
+Solve an instance for the MO-01UKP 
+"""
 function solve_MO01UKP(solver, p, w, c)
 
     o,n = size(p)

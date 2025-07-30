@@ -1,5 +1,9 @@
 # ------------------------------------------------------------
-# compute the average value
+"""
+    average_value(y_pred)
+
+compute the average value
+"""
 function average_value(y_pred)
     n = length(y_pred)
     somme = 0.0
@@ -11,7 +15,11 @@ end
 
 
 # ------------------------------------------------------------
-# compute the average absolue error
+"""
+    average_absolue_error(y, y_pred)
+
+compute the average absolue error
+"""
 function average_absolue_error(y, y_pred)
     n = length(y_pred)
     somme = 0.0
@@ -23,7 +31,11 @@ end
 
 
 # ------------------------------------------------------------
-# compute the average relative error
+"""
+    average_relative_error(y, y_pred)
+
+compute the average relative error
+"""
 function average_relative_error(y, y_pred)
     n = length(y_pred)
     somme = 0.0
