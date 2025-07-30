@@ -81,6 +81,8 @@ function L(  solver::DataType,
         @constraint(model, con[k=1:d], α ≤ - λ_ψ[i][k] * (rp[k] -  z[k]) )
         
         optimize!(model)
+        @assert is_solved_and_feasible(model) "Error: optimal solution not found"
+
         push!(L,objective_value(model))
         
         #println("zOpt: ", objective_value(model))

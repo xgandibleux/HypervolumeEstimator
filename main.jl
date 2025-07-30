@@ -20,7 +20,7 @@ println("-"^80)
 # =============================================================================
 println("Setup the parameters...")
 solver = GLPK.Optimizer
-n = 5    # number of variables
+n = 10    # number of variables
 o = 2    # number of objectives
 
 rp = zeros(Int,o)

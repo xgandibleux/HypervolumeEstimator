@@ -29,6 +29,7 @@ function solve_MO01UKP(solver, p, w, c)
     #set_attribute(mo01UKP, MOI.TimeLimitSec(), 60)
 
     optimize!(mo01UKP)
+    @assert is_solved_and_feasible(mo01UKP) "Error: optimal solution not found"
 
     S = (Vector{Int64})[]
     for i in 1:result_count(mo01UKP)
