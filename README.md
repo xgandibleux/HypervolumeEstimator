@@ -1,5 +1,5 @@
 # Hypervolume Estimator
-Algorithm for computing a consistent and unbiased estimation of the hypervolume of an unknown image of Pareto front.
+Algorithm for computing a consistent and unbiased estimation of the hypervolume of the set of non-dominated points a priori unknown.
 For the numerical experimentation needs, the multi-objective optimization problem implemented in the current version of the code is the 01 unidimensionnal knapsack problem.
 
 ## Paper
