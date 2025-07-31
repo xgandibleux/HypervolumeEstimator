@@ -29,6 +29,10 @@ Tested on macBook Pro under macOS v14.6, with Julia 1.10 using packages
 - HypothesisTests.jl v0.11.5
 - Plots.jl v1.40.14
 
+## Setup the number of variables and the number of objectives
+Change in the code the value assigned to `n` and `o`.
+Currently `n=10` and `o=3`.
+
 ## Data and outputs
 Instances are generated on the fly. A run displays in the terminal the results and saves on files
 - the instance generated

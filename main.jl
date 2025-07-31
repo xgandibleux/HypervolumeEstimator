@@ -16,12 +16,26 @@ include("src/computeCI.jl")
 
 println("-"^80)
 
+mutable struct resultsExpe
+    x::Vector{Int64}
+    Hmeasure::Float64
+    avH̃::Vector{Float64}
+    CIhight::Vector{Float64}
+    CIlow::Vector{Float64}
+end
+
+oneExpe = resultsExpe(  [100,500,1000,1500,2000,5000,10000], 
+                        0.0, 
+                        zeros(7),
+                        zeros(7),
+                        zeros(7)
+                    )
 
 # =============================================================================
 println("Setup the parameters...")
 solver = GLPK.Optimizer
 n = 10    # number of variables
-o = 2    # number of objectives
+o = 3     # number of objectives
 
 rp = zeros(Int,o)
 listrndWeights = [(100,100), (500,500), (1000,1000), (1500,1500), (2000,2000), (5000,5000), (10000,10000)]
@@ -76,13 +90,15 @@ open(instanceName*".res", "w") do ioAll
     end
     Hmeasure = read_Hmeasure("HVmeasure")
     @printf(". H(S) = %.1f\n", Hmeasure)
+    oneExpe.Hmeasure = Hmeasure
 
     write(ioAll, string("H(S) = ",Hmeasure, " \n"))
     write(ioAll, string("\n"))
 
 
     # =============================================================================
-    for rndWeights in listrndWeights
+    for iWeight in 1:length(listrndWeights)
+        rndWeights = listrndWeights[iWeight]
 
         # -------------------------------------------------------------------------
         println("\nCompute H̃, the estimation of H...")
@@ -132,6 +148,9 @@ open(instanceName*".res", "w") do ioAll
         write(ioAll, string("confidence interval for 95% = ",CIlow, " ", CIHigh, " \n"))
         write(ioAll, string("average CPUt for H̃          = ",avCPUt, " \n\n"))
 
+        oneExpe.avH̃[iWeight] = avH̃
+        oneExpe.CIhight[iWeight] = CIHigh
+        oneExpe.CIlow[iWeight] = CIlow
     end
 
 end
@@ -155,3 +174,26 @@ plot(listrndWeightsX, allareH̃,
 
 savefig("kp-"*string(n)*"-"*string(o))
 nothing
+
+
+function plot_values(oneExpe::resultsExpe)
+
+    exact = fill(oneExpe.Hmeasure,7)
+
+    yerr_low = oneExpe.avH̃ .- oneExpe.CIlow
+    yerr_high = oneExpe.CIhight .- oneExpe.avH̃ 
+
+    plot(listrndWeightsX, oneExpe.avH̃, yerror = (yerr_low, yerr_high),
+         label = "Avg Estimated ± CI", lw=2, marker=:circle, color=:red,
+         xticks = (listrndWeightsX, string.(listrndWeightsX)), xrotation = 45
+    )
+
+    scatter!(listrndWeightsX, exact, label = "Exact", marker=:diamond, ms=6, color=:black)
+
+    xlabel!("Number of weights")
+    ylabel!("Hypervolume value")
+    title!(string(n)*" variables | "*string(o)*" objectives | "*string(trials)*" trials | CI 95%")
+end
+
+plot_values(oneExpe)
+savefig("H"*string(n)*"-"*string(o))
