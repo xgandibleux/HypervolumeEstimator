@@ -38,4 +38,4 @@ Instances are generated on the fly. A run displays in the terminal the results a
 - the instance generated
 - the set of nondominated points
 - a full trace of the resolution
-- a figure of the average relative error
+- two figures (the average relative error; values computed for H, H estimated, CI)
