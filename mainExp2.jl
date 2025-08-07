@@ -1,15 +1,16 @@
 using Printf
-using JuMP, GLPK         # for solving MILP
-import MultiObjectiveAlgorithms as MOA # for computing the set of nondominated points
-using Distributions      # for computing the weights and CI (home version)
-using SpecialFunctions   # for computing the estimation value
-using HypothesisTests    # for computing the confidence interval (package version)
-using Statistics         # for computing the confidence interval (home version)
-using Plots              # for drawing the figure (evolution of the avg relative error)
-
-using MetaJul
 using Random
-using LaTeXStrings
+
+using MetaJul                           # for computing a good representative set of nondominated points with NSGA-II
+using JuMP, GLPK                        # for solving MILP
+#import MultiObjectiveAlgorithms as MOA  # for computing the set of nondominated points
+using Distributions                     # for computing the weights and CI (home version)
+using SpecialFunctions                  # for computing the estimation value
+using HypothesisTests                   # for computing the confidence interval (package version)
+using Statistics                        # for computing the confidence interval (home version)
+using Plots                             # for drawing the figure (evolution of the avg relative error)
+using LaTeXStrings                      # for writing in latex within a plot figure
+
 
 Random.seed!(1234)
 
@@ -102,6 +103,9 @@ open(instanceName*".res", "w") do ioAll
     write(ioAll, string("\n"))
 
 
+    # reset the random generator
+    Random.seed!(1234)
+    
     # =============================================================================
     for iWeight in 1:length(listrndWeights)
         rndWeights = listrndWeights[iWeight]
@@ -194,7 +198,7 @@ function plot_values(oneExpe::resultsExpe)
          xticks = (listrndWeightsX, string.(listrndWeightsX)), xrotation = 45
     )
 
-    plot!(listrndWeightsX, exact, label = "NSGA-II", marker=:diamond, ms=6, color=:black, linestyle=:dash)
+    plot!(listrndWeightsX, exact, label = "Metaheuristic", marker=:diamond, ms=6, color=:black, linestyle=:dash)
 
     xlabel!("Number of weights")
     ylabel!("Hypervolume value")

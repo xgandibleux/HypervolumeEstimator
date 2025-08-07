@@ -1,14 +1,13 @@
 using Printf
 using Random
-
-#using JuMP, GLPK         # for solving MILP
-using JuMP, GLPK, HiGHS, Gurobi, CPLEX
-import MultiObjectiveAlgorithms as MOA # for computing the set of nondominated points
-using Distributions      # for computing the weights and CI (home version)
-using SpecialFunctions   # for computing the estimation value
-using HypothesisTests    # for computing the confidence interval (package version)
-using Statistics         # for computing the confidence interval (home version)
-using Plots              # for drawing the figure (evolution of the avg relative error)
+       
+using JuMP, GLPK, HiGHS, Gurobi, CPLEX   # for solving MILP
+import MultiObjectiveAlgorithms as MOA   # for computing the set of nondominated points
+using Distributions                      # for computing the weights and CI (home version)
+using SpecialFunctions                   # for computing the estimation value
+using HypothesisTests                    # for computing the confidence interval (package version)
+using Statistics                         # for computing the confidence interval (home version)
+using Plots                              # for drawing the figure (evolution of the avg relative error)
 
 Random.seed!(1234)
 
@@ -42,8 +41,8 @@ solver = GLPK.Optimizer
 #solver = HiGHS.Optimizer
 #solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
-n = 30    # number of variables
-o = 4     # number of objectives
+n = 25    # number of variables
+o = 6     # number of objectives
 
 rp = zeros(Int,o)
 listrndWeights = [(100,100), (500,500), (1000,1000), (1500,1500), (2000,2000), (5000,5000), (10000,10000)]
@@ -103,6 +102,9 @@ open(instanceName*".res", "w") do ioAll
     write(ioAll, string("H(S) = ",Hmeasure, " \n"))
     write(ioAll, string("\n"))
 
+
+    # reset the random generator
+    Random.seed!(1234)
 
     # =============================================================================
     for iWeight in 1:length(listrndWeights)
@@ -198,7 +200,7 @@ function plot_values(oneExpe::resultsExpe)
          xticks = (listrndWeightsX, string.(listrndWeightsX)), xrotation = 45
     )
 
-    scatter!(listrndWeightsX, exact, label = "Exact", marker=:diamond, ms=6, color=:black)
+    plot!(listrndWeightsX, exact, label = "Exact", marker=:diamond, ms=6, color=:black, linestyle=:dash)
 
     xlabel!("Number of weights")
     ylabel!("Hypervolume value")

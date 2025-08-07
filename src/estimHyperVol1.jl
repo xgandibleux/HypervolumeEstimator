@@ -136,7 +136,7 @@ function Lbis(
     solve_time_sec = 0.0
     for λi in λ_ψ
         set_normalized_coefficient.(con, rhs, λi)
-        optimize!(model)
+        JuMP.optimize!(model)
         assert_is_solved_and_feasible(model)
         push!(obj_vals, objective_value(model))
         solve_time_sec += solve_time(model)
