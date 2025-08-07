@@ -75,6 +75,7 @@ function L(  solver::DataType,
     @variable(model, α ≥ 0)        
     @objective(model, Max, α)
 
+    solve_time_sec = 0.0
     for i in 1:length(λ_ψ)
 
         # add the d constraints for a given λ_ψ to the model
@@ -84,6 +85,7 @@ function L(  solver::DataType,
         @assert is_solved_and_feasible(model) "Error: optimal solution not found"
 
         push!(L,objective_value(model))
+        solve_time_sec += solve_time(model)
         
         #println("zOpt: ", objective_value(model))
         #print("xOpt: ", value.(model[:x]))
@@ -96,7 +98,50 @@ function L(  solver::DataType,
 
     end
     
-    return L
+    return L #, solve_time_sec
+end
+
+
+"""
+    Lbis(
+           solver,
+           p::Matrix{Int},
+           w::Vector{Int},
+           c::Int,
+           rp::Vector{Int},
+           λ_ψ::Vector{Vector{Float64}},
+       )
+
+Compute a series of L(S,r_*,ψ); version suggested by Oscar
+"""
+function Lbis(
+           solver,
+           p::Matrix{Int},
+           w::Vector{Int},
+           c::Int,
+           rp::Vector{Int},
+           λ_ψ::Vector{Vector{Float64}},
+       )
+    obj_vals = Float64[]
+    d, n = size(p)
+    model = Model(solver)
+    set_silent(model)
+    @variable(model, x[1:n], Bin)
+    @variable(model, rhs[1:d])
+    @variable(model, α)
+    @constraint(model, w' * x <= c)
+    @constraint(model, rhs .== rp .- p * x)
+    @objective(model, Max, 1.0 * α)
+    @constraint(model, con[k in 1:d], α + 1.0 * rhs[k] <= 0)
+    solve_time_sec = 0.0
+    for λi in λ_ψ
+        set_normalized_coefficient.(con, rhs, λi)
+        optimize!(model)
+        assert_is_solved_and_feasible(model)
+        push!(obj_vals, objective_value(model))
+        solve_time_sec += solve_time(model)
+    end
+    return obj_vals #, solve_time_sec
 end
 
 # ------------------------------------------------------------
