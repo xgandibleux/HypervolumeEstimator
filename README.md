@@ -18,7 +18,7 @@ Follow the indications provided [here](https://lopez-ibanez.eu/hypervolume) to c
 - in a terminal, move inside the directory downloaded 
 - compile `hv` on your computer and move the exec file into the `src` folder
 - invoke `julia`
-- in the REPL, invoke `include("main.jl")`
+- in the REPL, invoke `include("mainExp1.jl")`
 
 Tested on macBook Pro under macOS v14.6, with Julia 1.10 using packages 
 - JuMP.jl v1.26.0
@@ -28,13 +28,22 @@ Tested on macBook Pro under macOS v14.6, with Julia 1.10 using packages
 - SpecialFunctions.jl v2.5.1
 - HypothesisTests.jl v0.11.5
 - Plots.jl v1.40.14
+- MetaJul.jl v0.2.0 (https://github.com/jMetal/MetaJul)
 
 ## Setup the number of variables and the number of objectives
 Change in the code the value assigned to `n` and `o`.
 Currently `n=10` and `o=3`.
 
+## Numerical experiments available
+1. Given one instance, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
+   returns $H(Y_N)$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
+3. Given one instance, compute $Y_{PN}$ and $H(Y_{PN})$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
+   returns $H(Y_{PN})$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
+5. Given 20 instances with $n$ and $d$ fixed, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 1 trial/1 sets of weights (2000 weights);
+   returns average absolute and relative error on $\tilde{H}$, average elapsed times.
+
 ## Data and outputs
-Instances are generated on the fly. A run displays in the terminal the results and saves on files
+Instances are generated on the fly (the seed is fixed). A run displays in the terminal the results and saves on files (for exp1 and exp2)
 - the instance generated
 - the set of nondominated points
 - a full trace of the resolution
