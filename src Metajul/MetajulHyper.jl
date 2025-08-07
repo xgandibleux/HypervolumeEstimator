@@ -1,5 +1,6 @@
 using MetaJul
 using Random
+using LaTeXStrings
 
 #Random.seed!(42)
 #rows, cols = 2, 100
@@ -40,13 +41,32 @@ using Plots
 scatter(z1, z2, 
         xlim=(200,330), ylim=(200, 330),
         color="blue", 
-        title = "Pareto front approximation", 
-        label = "NSGA-II")
-xlabel!("Profit 1")
-ylabel!("Profit 2")
+        title = "Objective space", 
+        label = "NSGA-II: final population",
+        legend = :bottomleft,
+        aspect_ratio=:equal)
+xlabel!("objective 1")
+ylabel!("objective 2")
 
 
+# plot the nondominated points within the final population returned by NSGA-II
+archive = NonDominatedArchive(BinarySolution)
+for solution in foundSolutions(solver)
+        @show solution
+        add!(archive, solution)
+end
+@show archive
+for solution in getSolutions(archive)
+        @show solution
+end
+z1nd = [-1 * solution.objectives[1] for solution in getSolutions(archive)];
+z2nd = [-1 * solution.objectives[2] for solution in getSolutions(archive)];
+
+scatter!(z1nd, z2nd, markershape = :x , color="blue", markersize = 10, label = "NSGA-II: "*L"Z_N")
+
+
+# plot the set of nondominated points found by MOA with the TambyVanderpooten algorithm
 z1exact = [305, 324, 299, 292, 325, 273, 298]  
 z2exact = [269, 265, 274, 295, 240, 299, 290] 
-scatter!(z1exact, z2exact, markershape = :cross , color="red", markersize = 8, label = "TambyVanderpooten")
-savefig("metajul.png")
+scatter!(z1exact, z2exact, markershape = :cross , color="red", markersize = 8, label = "TambyVanderpooten: "*L"Z_N", markerstrokewidth = 2)
+#savefig("metajul.png")

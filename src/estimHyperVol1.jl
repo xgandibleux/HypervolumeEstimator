@@ -80,7 +80,7 @@ function L(  solver::DataType,
         # add the d constraints for a given λ_ψ to the model
         @constraint(model, con[k=1:d], α ≤ - λ_ψ[i][k] * (rp[k] -  z[k]) )
         
-        optimize!(model)
+        JuMP.optimize!(model)
         @assert is_solved_and_feasible(model) "Error: optimal solution not found"
 
         push!(L,objective_value(model))
