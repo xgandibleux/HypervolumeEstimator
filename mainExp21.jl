@@ -1,4 +1,4 @@
-#= EXPERIMENT 1: 
+#= EXPERIMENT 2.1: 
   - for n and d given 
     - generate 1 instance ramdomly 
   - for each instance 
@@ -62,8 +62,8 @@ solver = GLPK.Optimizer
 #solver = HiGHS.Optimizer
 #solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
-n = 50    # number of variables
-o = 4     # number of objectives
+n = 200    # number of variables
+o = 3     # number of objectives
 nWeights = n*o   # number of weights for the scalarizing function
 
 
