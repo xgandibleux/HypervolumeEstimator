@@ -1,3 +1,23 @@
+#= EXPERIMENT 1: 
+  - for n and d given 
+    - generate 1 instance ramdomly 
+  - for each instance 
+    - compute Y_N
+    - measure H 
+    - estimate H for 7 sets of weights, each set is composed of 100,500,1000,1500,2000,5000,10000 weights
+    - compute relative error 
+    - collect elapsed times 
+  - report for each instance 
+    - cardinality of Y_N
+    - elapsed time for computing Y_N   
+    - H measured     
+    - for each set of weights    
+      - average value of H estimated
+      - average value of elapsed time for H estimated
+      - confidence interval for 95%
+      - average value of relative error     
+=#
+
 using Printf
 using Random
        
@@ -42,7 +62,7 @@ solver = GLPK.Optimizer
 #solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
 n = 25    # number of variables
-o = 6     # number of objectives
+o = 2     # number of objectives
 
 rp = zeros(Int,o)
 listrndWeights = [(100,100), (500,500), (1000,1000), (1500,1500), (2000,2000), (5000,5000), (10000,10000)]
