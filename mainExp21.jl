@@ -2,14 +2,14 @@
   - for n and d given 
     - generate 1 instance ramdomly 
   - for each instance 
-    - compute Y_N
+    - compute Y_R
     - measure H 
     - estimate H for 7 sets of weights, each set is composed of 100,500,1000,1500,2000,5000,10000 weights
     - compute relative error 
     - collect elapsed times 
   - report for each instance 
-    - cardinality of Y_N
-    - elapsed time for computing Y_N   
+    - cardinality of Y_R
+    - elapsed time for computing Y_R   
     - H measured     
     - for each set of weights    
       - average value of H estimated
@@ -62,8 +62,10 @@ solver = GLPK.Optimizer
 #solver = HiGHS.Optimizer
 #solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
-n = 10    # number of variables
-o = 2     # number of objectives
+n = 50    # number of variables
+o = 4     # number of objectives
+nWeights = n*o   # number of weights for the scalarizing function
+
 
 rp = zeros(Int,o)
 listrndWeights = [(100,100), (500,500), (1000,1000), (1500,1500), (2000,2000), (5000,5000), (10000,10000)]
@@ -79,6 +81,17 @@ println("  number of trials     : ", trials)
 allareH̃ = (Float64)[]
 allaCPUt = (Float64)[]
 
+function evaluateSolution(p, x)
+    o,n = size(p)
+    z = zeros(Int,o)
+
+    for k in 1:o, j in 1:n
+        z[k] += p[k,j] * x[j]
+    end
+
+    return z
+end
+
 instanceName = "kp-" * string(n) * "-" * string(o)
 open(instanceName*".res", "w") do ioAll
     write(ioAll, string(instanceName,"\n"))
@@ -89,22 +102,64 @@ open(instanceName*".res", "w") do ioAll
     p, w, c = generate_MO01UKP(n,o)
     save_instance(instanceName* ".dat", p, w, c)
 
+    #S, cardS = solve_MO01UKP(solver, p, w, c)
+    #@show S, cardS
 
     # =============================================================================
-    println("\nCompute S, the set of nondominated points...")
+    println("\nCompute R, a set of nondominated points...")
     start = time()
-    S, cardS = solve_MO01UKP(solver, p, w, c)
-    save_nondominatedpoints(instanceName*".yn",S)
+    
+    # -------------------------------------------------------------------------
+    print("\n  1) Compute zᴵ = ")
+    zIdeal = Array{Int}(undef,o)
+    zUtopian = Array{Int}(undef,o)
+ 
+    start = time()
+    for k in 1:o
+        zIdeal[k], xOpt = solve_01UKP(solver, p[k,:], w, c)
+    end
+    zUtopian = Int.(ceil.(zIdeal .* 1.01))
+    t_elapsedU = round(time() - start, digits=2)
+    println(zIdeal, "  zᵁ = ", zUtopian, "  ($t_elapsedU s)")
 
-    t_elapsedS = round(time() - start, digits=2)
-    println("  |S|  = ",cardS, " ($t_elapsedS)s)")
-    write(ioAll, string("|S|  = ",cardS, " ($t_elapsedS s) \n"))
+   # -------------------------------------------------------------------------
+    R = Set{Vector{Int64}}([])
+    for _ in 1:nWeights
+
+        # compute a weight 
+        rnd = rand(1:100, o)
+        λ = rnd ./ sum(rnd)
+
+        # Compute a nondominated points using the weighted Tchebychev norm
+        zOpt, xOpt = solve_scalarized01UKP(solver, p, w, c, zUtopian, λ)
+
+        # Evaluate one solution on the objective functions
+        z = evaluateSolution(p, xOpt)
+
+        if z ∉ R
+            push!(R,z)
+        end
+    end
+    #@show R
+
+    t_elapsedR = round(time() - start, digits=2) 
+
+    save_nondominatedpoints(instanceName*".yr",R)
+    println("  |R|  = ",length(R), " ($t_elapsedR)s)")
+    write(ioAll, string("|R|  = ",length(R), " ($t_elapsedR s) \n"))
     #write(ioAll, string("\n"))
 
+    #for z in R
+    #    if z ∉ S
+    #        @assert false "WND point found " * string(z)
+    #    end
+    #end
+
+    #@assert false "stop"
 
     # =============================================================================
     println("\nCompute H, the hypervolume measure...")
-    writeOnFile_S("HVpoints", S)
+    writeOnFile_S("HVpoints", R)
     if o == 2
         run(pipeline(`./src/hv -r "0 0" HVpoints`, stdout="HVmeasure"))
     elseif o == 3
@@ -169,7 +224,7 @@ open(instanceName*".res", "w") do ioAll
         @printf("  average relative error H̃    = %.6f \n", areH̃)
         #@printf("  confidence interval for 95%% = [%.1f, %.1f] \n", ci[1], ci[2])
         @printf("  confidence interval for 95%% = [%.1f, %.1f] \n",CIlow, CIHigh)
-        @printf("  CPUt for computing S         = %.2f s\n", t_elapsedS)
+        @printf("  CPUt for computing S         = %.2f s\n", t_elapsedR)
         @printf("  average CPUt for H̃           = %.2f s\n", avCPUt)    
         push!(allareH̃, areH̃)
         push!(allaCPUt, avCPUt)
@@ -221,7 +276,7 @@ function plot_values(oneExpe::resultsExpe)
          xticks = (listrndWeightsX, string.(listrndWeightsX)), xrotation = 45
     )
 
-    plot!(listrndWeightsX, exact, label = "Exact", marker=:diamond, ms=6, color=:black, linestyle=:dash)
+    plot!(listrndWeightsX, exact, label = "Representative", marker=:diamond, ms=6, color=:black, linestyle=:dash)
 
     xlabel!("Number of weights")
     ylabel!("Hypervolume value")

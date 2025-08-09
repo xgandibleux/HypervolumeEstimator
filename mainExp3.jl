@@ -39,8 +39,8 @@ solver = GLPK.Optimizer
 #solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
 
-n = 25            # number of variables
-o = 5             # number of objectives
+n = 10            # number of variables
+o = 2             # number of objectives
 nInstances = 20   # number of nInstances
 
 rp = zeros(Int,o)

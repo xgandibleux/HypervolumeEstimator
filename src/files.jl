@@ -11,6 +11,15 @@ function writeOnFile_S(fname::String, S::Vector{Vector{Int}})
     end
 end
 
+function writeOnFile_S(fname::String, S::Set{Vector{Int64}})
+    open(fname, "w") do io
+        for point in S
+            point_neg = [-x for x in point]
+            println(io, join(point_neg, " "))
+        end
+    end
+end
+
 # ------------------------------------------------------------
 # read on a file one float number representing the H measure
 
@@ -62,6 +71,23 @@ function save_nondominatedpoints(fname::String, S::Vector{Vector{Int64}})
                 write(io, string(S[p][k], " "))
             end
             write(io, "\n")
+        end
+    end
+
+    return nothing
+end
+
+# ------------------------------------------------------------
+# save the data describing an instance generated
+function save_nondominatedpoints(fname::String, S::Set{Vector{Int64}})
+    n = length(S)       # number of points
+    open(fname, "w") do io
+        write(io, string(n, "\n")) # number of points
+
+        # Saving the points, 1 point per line
+        for point in S
+            point_ = [x for x in point]
+            println(io, join(point_, " "))
         end
     end
 

@@ -35,12 +35,16 @@ Change in the code the value assigned to `n` and `o`.
 Currently `n=10` and `o=3`.
 
 ## Numerical experiments available
-1. Given one instance, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
+- Experiment 1. Given one instance, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
    returns $H(Y_N)$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
-3. Given one instance, compute $Y_{PN}$ and $H(Y_{PN})$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
+- Experiment 2.1 Given one instance, compute $Y_{R}$ and $H(Y_{R})$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
    returns $H(Y_{PN})$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
-5. Given 20 instances with $n$ and $d$ fixed, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 1 trial/1 sets of weights (2000 weights);
+- Experiment 2.2 Given one instance, compute $Y_{PN}$ and $H(Y_{PN})$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
+   returns $H(Y_{PN})$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
+- Experiment 3. Given 20 instances with $n$ and $d$ fixed, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 1 trial/1 sets of weights (2000 weights);
    returns average absolute and relative error on $\tilde{H}$, average elapsed times.
+- Experiment 4. Given 1 instance with $n$ and $d$ fixed, compute the estimation $\tilde{H}$ for 1 trial/1 sets of weights (2000 weights);
+   returns average elapsed times.
 
 ## Data and outputs
 Instances are generated on the fly (the seed is fixed). A run displays in the terminal the results and saves on files (for exp1 and exp2)
