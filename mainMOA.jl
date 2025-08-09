@@ -1,6 +1,8 @@
 using Random
-using JuMP, GLPK, HiGHS, Gurobi, CPLEX
+using JuMP, GLPK#, HiGHS, Gurobi, CPLEX
 import MultiObjectiveAlgorithms as MOA 
+using Plots
+using LaTeXStrings
 Random.seed!(1234)
 
 
@@ -13,6 +15,15 @@ function generate_MO01UKP(n = 10, o = 2, max_ci = 100, max_wi = 30)
     return p, w, c
 end
 
+function set_MO01UKP()
+    p = [
+        13 10  3 16 12 11  1  9 19 13
+        1 10  3 13 12 19 16 13 11  9
+    ]
+    w = [4, 4, 3, 5, 5, 3, 2, 3, 5, 4]
+    c = 19
+    return p, w, c
+end
 
 function solve_MO01UKP(solver, p, w, c)
 
@@ -55,10 +66,33 @@ println("  number of objectives : ", o)
 println("  solver MIP invoked   : ", solver)
 
 println("\nGenerate an mo01UKP instance...")
-p, w, c = generate_MO01UKP(n,o)
+#p, w, c = generate_MO01UKP(n,o)
+p, w, c = set_MO01UKP()
 
 println("\nCompute S, the set of nondominated points...")
 start = time()
 S, cardS = solve_MO01UKP(solver, p, w, c)
 t_elapsedS = round(time() - start, digits=2)
 println("  |S|  = ",cardS, " ($t_elapsedS s)")
+
+
+z1nd = [s[1] for s in S]
+z2nd = [s[2] for s in S]
+
+scatter(z1nd, z2nd, 
+        xlim=(35,75), ylim=(35, 75),
+        color="blue", 
+        title = "Objective space", 
+        label = L"Y_N",
+        #legend = :bottomleft,
+        aspect_ratio=:equal)
+xlabel!("objective 1")
+ylabel!("objective 2")
+savefig("objSpace.png")
+
+
+#scatter!(z1nd, z2nd, markershape = :x , color="blue", markersize = 10, label = "NSGA-II: "*L"Z_N")
+# plot the set of nondominated points found by MOA with the TambyVanderpooten algorithm
+#z1exact = [305, 324, 299, 292, 325, 273, 298]  
+#z2exact = [269, 265, 274, 295, 240, 299, 290] 
+#scatter!(z1exact, z2exact, markershape = :cross , color="red", markersize = 8, label = "TambyVanderpooten: "*L"Z_N", markerstrokewidth = 2)
