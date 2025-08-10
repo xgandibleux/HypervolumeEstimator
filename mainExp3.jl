@@ -22,7 +22,7 @@ using Distributions                      # for computing the weights and CI (hom
 using SpecialFunctions                   # for computing the estimation value
 
 
-Random.seed!(1234)
+Random.seed!(1)
 
 include("src/instanceMO01UKP.jl")
 include("src/solveMO01UKP.jl")

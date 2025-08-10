@@ -62,8 +62,8 @@ solver = GLPK.Optimizer
 #solver = HiGHS.Optimizer
 #solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
-n = 200    # number of variables
-o = 3     # number of objectives
+n = 10    # number of variables
+o = 2     # number of objectives
 nWeights = n*o   # number of weights for the scalarizing function
 
 
