@@ -16,7 +16,8 @@ Follow the indications provided [here](https://lopez-ibanez.eu/hypervolume) to c
 ## Install and run the code the first time
 - download all the repository from GitHub
 - in a terminal, move inside the directory downloaded 
-- compile `hv` on your computer and move the exec file into the `src` folder
+- compile `hv` on your computer and move the exec file into the `src` folder 
+(on mac: make OPT_CFLAGS="-O2 -g")  
 - invoke `julia`
 - in the REPL, invoke `include("mainExp1.jl")`
 
