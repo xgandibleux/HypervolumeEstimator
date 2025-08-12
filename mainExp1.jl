@@ -62,8 +62,8 @@ solver = GLPK.Optimizer
 #solver = HiGHS.Optimizer
 #solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
-n = 10    # number of variables
-o = 2     # number of objectives
+n = 50    # number of variables
+o = 3     # number of objectives
 
 rp = zeros(Int,o)
 listrndWeights = [(100,100), (500,500), (1000,1000), (1500,1500), (2000,2000), (5000,5000), (10000,10000)]

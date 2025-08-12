@@ -81,7 +81,7 @@ p = [ 13 10  3 16 12 11  1  9 19 13 ;     # profit 1
 w  = [ 4, 4, 3, 5, 5, 3, 2, 3, 5, 4  ]    # weight
 c  = 19                                   # capacity
 
-rp = [40,40]
+rp = [0,0]
 start = time()
 H̃ = H(p, w, c, rp)
 t_elapsed = time() - start
