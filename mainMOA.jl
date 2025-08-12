@@ -1,8 +1,8 @@
 using Random
 using JuMP, GLPK#, HiGHS, Gurobi, CPLEX
 import MultiObjectiveAlgorithms as MOA 
-using Plots
-using LaTeXStrings
+#using Plots
+#using LaTeXStrings
 Random.seed!(1234)
 
 
@@ -57,8 +57,8 @@ solver = GLPK.Optimizer
 #solver = HiGHS.Optimizer
 #solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
-n = 30    # number of variables
-o = 2     # number of objectives
+n = 25    # number of variables
+o = 5     # number of objectives
 
 
 println("  number of variables  : ", n)
@@ -66,8 +66,8 @@ println("  number of objectives : ", o)
 println("  solver MIP invoked   : ", solver)
 
 println("\nGenerate an mo01UKP instance...")
-#p, w, c = generate_MO01UKP(n,o)
-p, w, c = set_MO01UKP()
+p, w, c = generate_MO01UKP(n,o)
+#p, w, c = set_MO01UKP()
 
 println("\nCompute S, the set of nondominated points...")
 start = time()
@@ -75,7 +75,7 @@ S, cardS = solve_MO01UKP(solver, p, w, c)
 t_elapsedS = round(time() - start, digits=2)
 println("  |S|  = ",cardS, " ($t_elapsedS s)")
 
-
+#=
 z1nd = [s[1] for s in S]
 z2nd = [s[2] for s in S]
 
@@ -89,7 +89,7 @@ scatter(z1nd, z2nd,
 xlabel!("objective 1")
 ylabel!("objective 2")
 savefig("objSpace.png")
-
+=#
 
 #scatter!(z1nd, z2nd, markershape = :x , color="blue", markersize = 10, label = "NSGA-II: "*L"Z_N")
 # plot the set of nondominated points found by MOA with the TambyVanderpooten algorithm
