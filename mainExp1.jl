@@ -62,7 +62,7 @@ solver = GLPK.Optimizer
 #solver = HiGHS.Optimizer
 #solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
-n = 50    # number of variables
+n = 25    # number of variables
 o = 3     # number of objectives
 
 rp = zeros(Int,o)
@@ -196,7 +196,7 @@ plot(listrndWeightsX, allareH̃,
     seriestype = :line, 
     marker = :circle,
     title = string(n)*" variables | "*string(o)*" objectives | "*string(trials)*" trials",
-    xlabel = "Number of weights",
+    xlabel = "Number of weight vectors/iterations",
     ylabel = "average relative error",
     legend = false,
     linewidth = 2,
@@ -223,7 +223,7 @@ function plot_values(oneExpe::resultsExpe)
 
     plot!(listrndWeightsX, exact, label = "Exact", marker=:diamond, ms=6, color=:black, linestyle=:dash)
 
-    xlabel!("Number of weights")
+    xlabel!("Number of weight vectors/iterations")
     ylabel!("Hypervolume value")
     title!(string(n)*" variables | "*string(o)*" objectives | "*string(trials)*" trials | CI 95%")
 end

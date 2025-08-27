@@ -22,8 +22,8 @@ norm_exp2 = H_YR2 ./ avgH_ref
 # -------------------------
 # Plotting
 # -------------------------
-p = plot(n_vals, norm_exp1, label=L"H(Y_{R_1})"*" experiment 2.1", marker=:o, lw=2)
-plot!(p, n_vals, norm_exp2, label=L"H(Y_{R_2})"*" experiment 2.2", marker=:s, lw=2)
+p = plot(n_vals, norm_exp1, label=L"H(Y_{A_1})"*" experiment 2.1", marker=:o, lw=2)
+plot!(p, n_vals, norm_exp2, label=L"H(Y_{A_2})"*" experiment 2.2", marker=:s, lw=2)
 
 # Horizontal line corresponding to the reference avgH
 hline!([1.0], linestyle=:dash, color=:black, label=L"avg \ \tilde{H}")
@@ -33,7 +33,7 @@ xticks!((n_vals, string.(n_vals)))
 
 xlabel!("number of variables (n)")
 ylabel!("H measured normalized")
-title!("gap" * L"(avg \ \tilde{H}, H(Y_{R_1}))"*" and "*"gap" * L"(avg \ \tilde{H}, H(Y_{R_2}))")
+title!("gap" * L"(avg \ \tilde{H}, H(Y_{A_1}))"*" and "*"gap" * L"(avg \ \tilde{H}, H(Y_{A_2}))")
 
 display(p)
 

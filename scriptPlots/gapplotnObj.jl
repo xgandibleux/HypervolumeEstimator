@@ -23,15 +23,15 @@ norm_exp2 = H_YR1_exp2 ./ avgH_exp2
 # -------------------------
 # Plotting
 # -------------------------
-p = plot(d_vals, norm_exp1, label=L"H(Y_{R_1})"*" experiment 2.1", marker=:o, lw=2)
-plot!(p, d_vals, norm_exp2, label=L"H(Y_{R_2})"*" experiment 2.2", marker=:s, lw=2)
+p = plot(d_vals, norm_exp1, label=L"H(Y_{A_1})"*" experiment 2.1", marker=:o, lw=2)
+plot!(p, d_vals, norm_exp2, label=L"H(Y_{A_2})"*" experiment 2.2", marker=:s, lw=2)
 
 # Horizontal line corresponding to the reference avgH
 hline!([1.0], linestyle=:dash, color=:black, label=L"avg \ \tilde{H}")
 
 xlabel!("number of objectives (d)")
 ylabel!("H measured normalized")
-title!("gap" * L"(avg \ \tilde{H}, H(Y_{R_1}))"*" and "*"gap" * L"(avg \ \tilde{H}, H(Y_{R_2}))")
+title!("gap" * L"(avg \ \tilde{H}, H(Y_{A_1}))"*" and "*"gap" * L"(avg \ \tilde{H}, H(Y_{A_2}))")
 
 display(p)
 

@@ -11,6 +11,7 @@
 using Distributions
 using JuMP, GLPK
 using SpecialFunctions
+Random.seed!(1234)
 
 
 """
@@ -23,7 +24,7 @@ function ψ(d)
     ϕ = rand(distribution,d)
     ϕ = abs.(ϕ)
     ϕnorm = sqrt(sum(ϕ[j]^2 for j in 1:d))
-    return [ϕ[i]/ϕnorm for i in 1:d]
+    return [ϕ[j]/ϕnorm for j in 1:d]
 end
 
 
@@ -46,11 +47,11 @@ function L(p, w, c, rp, λ_ψ)
     d,n = size(p)    
     m = Model(GLPK.Optimizer)  
     @variable(m, x[1:n], Bin)
-    @constraint(m, sum(w[i]*x[i] for i=1:n) ≤ c)
-    @expression(m, z[k=1:d], sum(p[k,j]*x[j] for j=1:n)) 
+    @constraint(m, sum(w[k]*x[k] for k=1:n) ≤ c)
+    @expression(m, z[j=1:d], sum(p[j,k]*x[k] for k=1:n)) 
     @variable(m, α ≥ 0)        
     @objective(m, Max, α)
-    @constraint(m, [k=1:d], α ≤ -λ_ψ[k]*(rp[k]-z[k]))
+    @constraint(m, [j=1:d], α ≤ -λ_ψ[j]*(rp[j]-z[j]))
     optimize!(m)
     return objective_value(m)
 end
