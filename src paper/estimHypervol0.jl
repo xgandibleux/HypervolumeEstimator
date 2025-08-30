@@ -8,6 +8,7 @@
 # version to be included in the paper - model rebuilt from scratch-
 
 
+using Random
 using Distributions
 using JuMP, GLPK
 using SpecialFunctions
