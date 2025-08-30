@@ -62,7 +62,7 @@ solver = GLPK.Optimizer
 #solver = HiGHS.Optimizer
 #solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
-n = 25    # number of variables
+n = 10    # number of variables
 o = 3     # number of objectives
 
 rp = zeros(Int,o)

@@ -1,6 +1,6 @@
 # Hypervolume Estimator
 Algorithm for computing a consistent and unbiased estimation of the hypervolume of the set of non-dominated points a priori unknown.
-For the numerical experimentation needs, the multi-objective optimization problem implemented in the current version of the code is the 01 unidimensionnal knapsack problem.
+For the numerical experimentation needs, the multi-objective optimization problem implemented in the current version of the code is the 01 unidimensional knapsack problem.
 
 ## Paper
 Available on *to add on [optimization-online](https://optimization-online.org/)* 

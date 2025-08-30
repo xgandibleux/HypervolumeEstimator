@@ -61,8 +61,8 @@ oneExpe = resultsExpe(  [100,500,1000,1500,2000,5000,10000],
 # =============================================================================
 println("Setup the parameters...")
 solver = GLPK.Optimizer
-n = 25    # number of variables
-o = 5      # number of objectives
+n = 10    # number of variables
+o = 3      # number of objectives
 
 rp = zeros(Int,o)
 listrndWeights = [(100,100), (500,500), (1000,1000), (1500,1500), (2000,2000), (5000,5000), (10000,10000)]
