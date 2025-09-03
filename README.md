@@ -3,7 +3,7 @@ Algorithm for computing a consistent and unbiased estimation of the hypervolume 
 For the numerical experimentation needs, the multi-objective optimization problem implemented in the current version of the code is the 01 unidimensional knapsack problem.
 
 ## Paper
-Available on *to add on [optimization-online](https://optimization-online.org/2025/09/consistent-and-unbiased-estimation-of-the-hypervolume-of-an-unknown-true-pareto-front/)* 
+Available on [optimization-online](https://optimization-online.org/2025/09/consistent-and-unbiased-estimation-of-the-hypervolume-of-an-unknown-true-pareto-front/)
 
 Citate this work: *Consistent and unbiased estimation of the hypervolume of an unknown true Pareto front. Xavier Gandibleux and Andrzej Jaszkiewicz. Optimization-online.
 Published: 2025/09/03*
