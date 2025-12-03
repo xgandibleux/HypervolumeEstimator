@@ -1,0 +1,1691 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Random.seed!(12345)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Setup the parameters...
+  number of variables  : 10
+  number of objectives : 3
+  reference point      : [0, 0, 0]
+  interval of #weights : [(100, 100), (500, 500), (1000, 1000), (1500, 1500), (2000, 2000), (5000, 5000), (10000, 10000)]
+  solver MIP invoked   : Gurobi.Optimizer
+  number of trials     : 20
+
+Generate an mo01UKP instance...
+
+Compute S, the set of nondominated points...
+  |S|  = 10 (2.37)s)
+
+Compute H, the hypervolume measure...
+. H(S) = 6.557125e+07
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 100 weight:  60218538.4  (0.23 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  63446354.8  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  64814777.2  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  63499741.2  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  62325514.7  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  64262199.8  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  65175291.7  (0.09 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  64440789.6  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  64075420.7  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  65119851.1  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  65893898.6  (0.07 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  69035582.3  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  63281987.7  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  61435528.1  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  71118490.4  (0.07 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  67142886.0  (0.07 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  69685810.9  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  68227176.6  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  67012608.4  (0.06 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  62761804.5  (0.06 s)
+
+Analyze the results...
+  value H(S)                  = 6.557125e+07 
+  average value H̃             = 6.514871e+07 
+  average absolue error H̃     = 2.334307e+06 
+  average relative error H̃    = 0.035600 
+  confidence interval for 95% = [6.382397e+07, 6.647346e+07] 
+  CPUt for computing S         = 2.37 s
+  average CPUt for H̃           = 0.07 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 500 weight:  63732048.8  (0.31 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  66471660.4  (0.31 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  66625313.4  (0.31 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  66177869.9  (0.3 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  64319836.4  (0.3 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  64509740.6  (0.31 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  65326773.4  (0.3 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  62991290.4  (0.3 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  65878059.5  (0.29 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  67115434.8  (0.3 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  66438582.3  (0.31 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  63750394.9  (0.3 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  65086922.9  (0.29 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  66370722.1  (0.3 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  67158570.9  (0.3 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  66522383.1  (0.31 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  65170846.8  (0.3 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  64278520.7  (0.3 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  64801602.2  (0.3 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  65680181.0  (0.32 s)
+
+Analyze the results...
+  value H(S)                  = 6.557125e+07 
+  average value H̃             = 6.542034e+07 
+  average absolue error H̃     = 1.023540e+06 
+  average relative error H̃    = 0.015610 
+  confidence interval for 95% = [6.485315e+07, 6.598753e+07] 
+  CPUt for computing S         = 2.37 s
+  average CPUt for H̃           = 0.30 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 1000 weight:  65168513.2  (0.61 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  64127056.4  (0.61 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  66163099.5  (0.61 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  67163116.1  (0.59 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  65485526.7  (0.59 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  65250829.2  (0.59 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  66337485.5  (0.58 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  66565235.4  (0.61 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  64917378.3  (0.6 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  65233159.4  (0.59 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  64634554.6  (0.59 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  66095135.7  (0.59 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  65527383.7  (0.6 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  66610408.0  (0.58 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  64880899.9  (0.59 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  66231280.2  (0.6 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  65687835.0  (0.59 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  64925425.3  (0.61 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  65411970.3  (0.59 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  66504660.1  (0.6 s)
+
+Analyze the results...
+  value H(S)                  = 6.557125e+07 
+  average value H̃             = 6.564605e+07 
+  average absolue error H̃     = 6.469026e+05 
+  average relative error H̃    = 0.009866 
+  confidence interval for 95% = [6.527846e+07, 6.601363e+07] 
+  CPUt for computing S         = 2.37 s
+  average CPUt for H̃           = 0.60 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 1500 weight:  65764954.8  (0.89 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  65487871.0  (0.89 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  64753302.9  (0.87 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  65333802.6  (0.9 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  66010421.6  (0.89 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  65988708.8  (0.91 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  65631926.5  (0.9 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  66479578.4  (0.89 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  64082865.1  (0.89 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  65460156.1  (0.89 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  66375184.7  (0.88 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  66969947.7  (0.9 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  65500369.0  (0.88 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  65345038.6  (0.87 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  66310945.4  (0.9 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  66350058.7  (0.89 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  65765857.0  (0.88 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  66953070.3  (0.9 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  65140966.0  (0.9 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  65664700.7  (0.88 s)
+
+Analyze the results...
+  value H(S)                  = 6.557125e+07 
+  average value H̃             = 6.576849e+07 
+  average absolue error H̃     = 5.437998e+05 
+  average relative error H̃    = 0.008293 
+  confidence interval for 95% = [6.543984e+07, 6.609713e+07] 
+  CPUt for computing S         = 2.37 s
+  average CPUt for H̃           = 0.89 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 2000 weight:  65306186.5  (1.17 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  65332307.2  (1.19 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  66721668.2  (1.18 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  65506909.2  (1.19 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  66409351.3  (1.18 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  65414496.5  (1.18 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  64541990.7  (1.19 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  66450345.8  (1.17 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  64973743.8  (1.18 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  65494475.1  (1.19 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  65667076.3  (1.18 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  65902060.9  (1.21 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  65493794.9  (1.17 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  65162349.7  (1.19 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  66333776.7  (1.2 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  64772625.8  (1.19 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  65418762.1  (1.19 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  65185536.7  (1.2 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  66428467.0  (1.18 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  65797932.7  (1.18 s)
+
+Analyze the results...
+  value H(S)                  = 6.557125e+07 
+  average value H̃             = 6.561569e+07 
+  average absolue error H̃     = 4.696244e+05 
+  average relative error H̃    = 0.007162 
+  confidence interval for 95% = [6.533557e+07, 6.589582e+07] 
+  CPUt for computing S         = 2.37 s
+  average CPUt for H̃           = 1.19 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65136014.9  (2.96 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65532041.0  (2.95 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  66142771.3  (2.97 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65664366.5  (2.96 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65523260.7  (2.99 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65314810.6  (2.96 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65399397.1  (2.92 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65321882.4  (2.98 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  66091932.1  (2.98 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65876076.5  (2.96 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65973557.8  (2.95 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65728336.0  (2.93 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65677916.6  (2.96 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  64949607.4  (2.98 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65609796.9  (2.94 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65607205.5  (2.98 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  66239882.2  (2.94 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65600714.7  (2.97 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65633105.9  (2.97 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  65674755.4  (2.97 s)
+
+Analyze the results...
+  value H(S)                  = 6.557125e+07 
+  average value H̃             = 6.563487e+07 
+  average absolue error H̃     = 2.457961e+05 
+  average relative error H̃    = 0.003749 
+  confidence interval for 95% = [6.548232e+07, 6.578742e+07] 
+  CPUt for computing S         = 2.37 s
+  average CPUt for H̃           = 2.96 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65733486.1  (5.88 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65698855.6  (5.89 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65372623.9  (5.92 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65969310.9  (5.96 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65610354.8  (5.94 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65245607.9  (5.97 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65359035.8  (5.98 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65398076.7  (5.95 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65253653.3  (5.99 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65876528.2  (5.99 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65525444.7  (5.99 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65724743.0  (5.99 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  66055090.4  (6.04 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65179391.0  (6.25 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65647216.3  (6.4 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65545992.0  (6.29 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65900259.2  (6.47 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65010299.9  (6.54 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  66024402.0  (6.5 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  65831477.2  (6.31 s)
+
+Analyze the results...
+  value H(S)                  = 6.557125e+07 
+  average value H̃             = 6.559809e+07 
+  average absolue error H̃     = 2.519552e+05 
+  average relative error H̃    = 0.003842 
+  confidence interval for 95% = [6.545734e+07, 6.573884e+07] 
+  CPUt for computing S         = 2.37 s
+  average CPUt for H̃           = 6.11 s
+
+All average relative error H̃ = [0.0355995483200539, 0.015609585984583558, 0.009865644795215556, 0.008293265538247357, 0.00716204818076268, 0.0037485342283254583, 0.0038424649788894156]
+
+All CPUt with Gurobi.Optimizer = [0.07150000000000004, 0.30299999999999994, 0.5959999999999999, 0.89, 1.1854999999999998, 2.9609999999999994, 6.112500000000002]
+"/Users/gandibleux-x/Documents/GitHub/HypervolumeEstimator/H10-3.png"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Setup the parameters...
+  number of variables  : 25
+  number of objectives : 3
+  reference point      : [0, 0, 0]
+  interval of #weights : [(100, 100), (500, 500), (1000, 1000), (1500, 1500), (2000, 2000), (5000, 5000), (10000, 10000)]
+  solver MIP invoked   : Gurobi.Optimizer
+  number of trials     : 20
+
+Generate an mo01UKP instance...
+
+Compute S, the set of nondominated points...
+  |S|  = 149 (2.0)s)
+
+Compute H, the hypervolume measure...
+. H(S) = 8.034705e+08
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 100 weight:  765207549.6  (0.33 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  795914090.7  (0.17 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  768176938.5  (0.16 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  773741561.8  (0.13 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  785856345.4  (0.15 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  753006510.4  (0.14 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  802379713.6  (0.14 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  757430613.2  (0.15 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  774859804.4  (0.14 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  815582974.7  (0.15 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  849424629.5  (0.15 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  827958190.0  (0.15 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  768548503.6  (0.13 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  766855743.9  (0.15 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  879252312.6  (0.15 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  841202460.7  (0.14 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  809127285.9  (0.16 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  853323039.5  (0.15 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  843450297.4  (0.14 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  795711144.6  (0.15 s)
+
+Analyze the results...
+  value H(S)                  = 8.034705e+08 
+  average value H̃             = 8.013505e+08 
+  average absolue error H̃     = 3.127573e+07 
+  average relative error H̃    = 0.038926 
+  confidence interval for 95% = [7.839984e+08, 8.187025e+08] 
+  CPUt for computing S         = 2.00 s
+  average CPUt for H̃           = 0.16 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 500 weight:  792965700.4  (0.73 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  809979750.0  (0.7 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  822356929.1  (0.73 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  800724084.1  (0.71 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  786147645.6  (0.7 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  792641232.0  (0.81 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  802473866.5  (0.8 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  756098279.0  (0.69 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  787807201.7  (0.66 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  823154927.6  (0.67 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  815765365.8  (0.74 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  810822060.5  (0.72 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  782496786.9  (0.7 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  807970783.5  (0.72 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  822797309.1  (0.76 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  810526359.6  (0.69 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  802164156.7  (0.69 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  802225622.7  (0.71 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  803624316.1  (0.69 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  821670234.7  (0.72 s)
+
+Analyze the results...
+  value H(S)                  = 8.034705e+08 
+  average value H̃             = 8.027206e+08 
+  average absolue error H̃     = 1.214617e+07 
+  average relative error H̃    = 0.015117 
+  confidence interval for 95% = [7.949601e+08, 8.104812e+08] 
+  CPUt for computing S         = 2.00 s
+  average CPUt for H̃           = 0.72 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 1000 weight:  793481847.6  (1.41 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  781507907.6  (1.37 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  815555310.2  (1.41 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  816428570.6  (1.6 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  807309792.8  (1.42 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  799741505.1  (1.4 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  795619398.2  (1.43 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  815754038.0  (1.55 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  799511435.8  (1.49 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  796584858.9  (1.46 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  800487606.5  (1.49 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  792489704.4  (1.48 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  817908657.1  (1.44 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  805138190.3  (1.36 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  794334855.1  (1.52 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  821957513.6  (1.58 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  794658544.3  (1.42 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  800091117.3  (1.51 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  789339546.5  (1.4 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  807439417.2  (1.49 s)
+
+Analyze the results...
+  value H(S)                  = 8.034705e+08 
+  average value H̃             = 8.022670e+08 
+  average absolue error H̃     = 9.176252e+06 
+  average relative error H̃    = 0.011421 
+  confidence interval for 95% = [7.971833e+08, 8.073507e+08] 
+  CPUt for computing S         = 2.00 s
+  average CPUt for H̃           = 1.46 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 1500 weight:  810095884.7  (2.15 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  806775544.6  (2.11 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  796444545.1  (2.1 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  805770238.8  (2.22 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  808465492.7  (2.15 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  811482627.0  (2.18 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  804701426.9  (2.33 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  800655126.8  (2.13 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  791972995.0  (2.19 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  809968643.7  (2.23 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  802417794.4  (2.22 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  814480036.7  (2.25 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  809679573.5  (2.34 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  786371548.0  (2.2 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  817158274.1  (2.24 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  809974493.6  (2.37 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  799361558.6  (2.35 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  819024283.7  (2.38 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  815450378.5  (2.4 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  804382539.6  (2.56 s)
+
+Analyze the results...
+  value H(S)                  = 8.034705e+08 
+  average value H̃             = 8.062317e+08 
+  average absolue error H̃     = 7.121106e+06 
+  average relative error H̃    = 0.008863 
+  confidence interval for 95% = [8.023365e+08, 8.101268e+08] 
+  CPUt for computing S         = 2.00 s
+  average CPUt for H̃           = 2.25 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 2000 weight:  791183897.1  (3.03 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  799270499.8  (2.95 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  809381856.0  (3.05 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  803698938.8  (3.09 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  814499475.4  (2.95 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  800003852.8  (3.11 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  798667345.3  (2.94 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  806900334.5  (3.12 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  788421372.2  (3.03 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  802629451.8  (2.98 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  796414233.2  (3.18 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  813216095.6  (2.98 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  799059715.3  (3.22 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  805929136.2  (3.13 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  821710475.6  (2.92 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  801354163.0  (2.9 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  806256272.9  (2.88 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  806743271.5  (2.92 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  813443517.1  (2.98 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  802150011.5  (2.84 s)
+
+Analyze the results...
+  value H(S)                  = 8.034705e+08 
+  average value H̃             = 8.040467e+08 
+  average absolue error H̃     = 6.131242e+06 
+  average relative error H̃    = 0.007631 
+  confidence interval for 95% = [8.002968e+08, 8.077966e+08] 
+  CPUt for computing S         = 2.00 s
+  average CPUt for H̃           = 3.01 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 5000 weight:  803092265.9  (7.38 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  800257344.4  (7.34 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  808064440.8  (7.82 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  804878332.4  (7.56 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  806939280.9  (7.71 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  796059669.8  (7.63 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  794554457.6  (7.26 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  806519793.7  (7.41 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  810805310.9  (7.72 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  806192227.7  (7.64 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  810683595.3  (7.67 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  800823644.5  (7.43 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  804398578.0  (7.54 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  804210362.8  (7.66 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  799790541.5  (7.35 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  804074127.7  (7.72 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  810976502.8  (7.54 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  808727482.3  (7.51 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  807440993.1  (7.45 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  808675077.6  (7.89 s)
+
+Analyze the results...
+  value H(S)                  = 8.034705e+08 
+  average value H̃             = 8.048582e+08 
+  average absolue error H̃     = 4.012222e+06 
+  average relative error H̃    = 0.004994 
+  confidence interval for 95% = [8.026757e+08, 8.070407e+08] 
+  CPUt for computing S         = 2.00 s
+  average CPUt for H̃           = 7.56 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 10000 weight:  805116424.8  (14.87 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  800279768.5  (14.34 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  800559705.5  (14.08 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  807390415.1  (13.68 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  801535039.2  (13.91 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  800177362.6  (13.87 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  802406629.2  (13.7 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  803198071.8  (13.85 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  801901468.7  (14.13 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  805887487.5  (14.57 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  803704522.4  (14.61 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  806524636.2  (14.75 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  811151651.5  (15.1 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  805475505.6  (15.05 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  803632617.5  (14.88 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  800746210.0  (14.98 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  807170669.5  (15.1 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  799520306.6  (15.45 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  806830767.8  (15.38 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  807437417.6  (15.35 s)
+
+Analyze the results...
+  value H(S)                  = 8.034705e+08 
+  average value H̃             = 8.040323e+08 
+  average absolue error H̃     = 2.652831e+06 
+  average relative error H̃    = 0.003302 
+  confidence interval for 95% = [8.025497e+08, 8.055150e+08] 
+  CPUt for computing S         = 2.00 s
+  average CPUt for H̃           = 14.58 s
+
+All average relative error H̃ = [0.03892579570366318, 0.015117136826488567, 0.011420770603563139, 0.00886293422365934, 0.007630948263177928, 0.004993614154847237, 0.003301715320275956]
+
+All CPUt with Gurobi.Optimizer = [0.1565, 0.717, 1.4615000000000002, 2.255, 3.0100000000000002, 7.561499999999998, 14.582500000000001]
+"/Users/gandibleux-x/Documents/GitHub/HypervolumeEstimator/H25-3.png"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Setup the parameters...
+  number of variables  : 50
+  number of objectives : 3
+  reference point      : [0, 0, 0]
+  interval of #weights : [(100, 100), (500, 500), (1000, 1000), (1500, 1500), (2000, 2000), (5000, 5000), (10000, 10000)]
+  solver MIP invoked   : Gurobi.Optimizer
+  number of trials     : 20
+
+Generate an mo01UKP instance...
+
+Compute S, the set of nondominated points...
+  |S|  = 351 (14.97)s)
+
+Compute H, the hypervolume measure...
+. H(S) = 9.076183e+09
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 100 weight:  8767507515.5  (0.38 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  8856694041.6  (0.2 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  8964685427.5  (0.24 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  9170156753.1  (0.27 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  8776649553.7  (0.24 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  8770472362.6  (0.25 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  9211323977.4  (0.24 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  8846500919.5  (0.23 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  8957710308.6  (0.24 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  8865117867.2  (0.26 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  9252133221.6  (0.27 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  9685545936.2  (0.26 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  8846892654.8  (0.25 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  8422751081.1  (0.21 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  9423941773.4  (0.22 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  9299346079.9  (0.25 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  9233817507.8  (0.23 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  9416906875.9  (0.26 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  9158595449.7  (0.24 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  8732590427.2  (0.23 s)
+
+Analyze the results...
+  value H(S)                  = 9.076183e+09 
+  average value H̃             = 9.032967e+09 
+  average absolue error H̃     = 2.598280e+08 
+  average relative error H̃    = 0.028627 
+  confidence interval for 95% = [8.890585e+09, 9.175349e+09] 
+  CPUt for computing S         = 14.97 s
+  average CPUt for H̃           = 0.25 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 500 weight:  8959166897.4  (1.23 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9269541522.3  (1.22 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9207531989.0  (1.27 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9107237277.6  (1.22 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  8917218599.0  (1.2 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  8832670028.2  (1.2 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9118470697.5  (1.21 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  8858829903.6  (1.11 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  8903531953.8  (1.21 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9295655419.2  (1.29 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9107612224.0  (1.26 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9010634670.6  (1.22 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9051320028.0  (1.28 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9186074004.2  (1.28 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9161627272.0  (1.25 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9263687971.2  (1.23 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9040538152.6  (1.25 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9093908816.0  (1.24 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  8929088281.3  (1.23 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  9012001385.3  (1.17 s)
+
+Analyze the results...
+  value H(S)                  = 9.076183e+09 
+  average value H̃             = 9.066317e+09 
+  average absolue error H̃     = 1.148174e+08 
+  average relative error H̃    = 0.012650 
+  confidence interval for 95% = [9.001298e+09, 9.131336e+09] 
+  CPUt for computing S         = 14.97 s
+  average CPUt for H̃           = 1.23 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9019953062.3  (2.52 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  8980833052.6  (2.4 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9042597703.7  (2.54 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9277511226.6  (2.54 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9001801030.3  (2.48 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9082650071.3  (2.57 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9264465270.1  (2.52 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9178645078.5  (2.57 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  8978503791.4  (2.46 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  8948496589.3  (2.61 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  8952508507.3  (2.43 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9156939101.9  (2.59 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9200608264.1  (2.53 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9189098276.5  (2.6 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9056364006.2  (2.76 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9108726704.5  (2.5 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9117552957.4  (2.74 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9016420193.2  (2.57 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9137368465.9  (2.72 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  9158330632.1  (2.65 s)
+
+Analyze the results...
+  value H(S)                  = 9.076183e+09 
+  average value H̃             = 9.093469e+09 
+  average absolue error H̃     = 8.610264e+07 
+  average relative error H̃    = 0.009487 
+  confidence interval for 95% = [9.046350e+09, 9.140587e+09] 
+  CPUt for computing S         = 14.97 s
+  average CPUt for H̃           = 2.56 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9125003697.2  (3.9 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9023567129.6  (3.99 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9000735564.3  (3.92 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9038359700.3  (3.98 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9146308819.7  (4.0 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9127481988.4  (3.8 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9054104811.1  (3.94 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9153789612.6  (3.99 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9011169966.1  (3.95 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9135779783.5  (4.25 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9153648641.8  (3.94 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9181329055.5  (4.15 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9063352152.5  (4.11 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9114729207.9  (3.89 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9221292895.9  (4.11 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9234551546.5  (4.08 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9047893672.8  (3.94 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9178798197.6  (3.89 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  9081403901.3  (3.9 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  8977612175.6  (3.82 s)
+
+Analyze the results...
+  value H(S)                  = 9.076183e+09 
+  average value H̃             = 9.103546e+09 
+  average absolue error H̃     = 6.662957e+07 
+  average relative error H̃    = 0.007341 
+  confidence interval for 95% = [9.068744e+09, 9.138347e+09] 
+  CPUt for computing S         = 14.97 s
+  average CPUt for H̃           = 3.98 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9033971833.0  (5.08 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9033676071.9  (5.1 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9160733983.1  (5.14 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9080709564.6  (5.15 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9168330503.2  (5.2 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9067238825.0  (5.35 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  8913945830.1  (5.14 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9139603498.2  (5.24 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  8996268681.4  (5.25 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9022996261.1  (5.15 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9057241398.8  (5.26 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9043809344.0  (5.16 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  8975289273.8  (5.22 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9082159062.0  (5.15 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9100735886.1  (5.39 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  8936436856.1  (5.14 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9081821297.7  (5.17 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9031802887.9  (5.31 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9138391085.4  (5.34 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  9087528633.9  (5.4 s)
+
+Analyze the results...
+  value H(S)                  = 9.076183e+09 
+  average value H̃             = 9.057635e+09 
+  average absolue error H̃     = 5.398508e+07 
+  average relative error H̃    = 0.005948 
+  confidence interval for 95% = [9.025467e+09, 9.089803e+09] 
+  CPUt for computing S         = 14.97 s
+  average CPUt for H̃           = 5.22 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9075773921.6  (13.05 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9075585605.2  (12.78 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9117188773.7  (12.95 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9068849646.7  (12.79 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9020867101.5  (12.67 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9085067481.1  (12.6 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9085996577.8  (12.59 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9016935487.9  (12.25 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9128423683.7  (11.28 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9116164707.7  (11.65 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9134006010.4  (11.35 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9073350043.2  (11.52 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9144426246.9  (11.92 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9042744386.3  (12.07 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9061918609.1  (11.69 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9098262785.0  (12.03 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9142809368.8  (12.21 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9115996323.4  (12.19 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9085370585.6  (12.47 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  9026972023.0  (12.41 s)
+
+Analyze the results...
+  value H(S)                  = 9.076183e+09 
+  average value H̃             = 9.085835e+09 
+  average absolue error H̃     = 3.191752e+07 
+  average relative error H̃    = 0.003517 
+  confidence interval for 95% = [9.067459e+09, 9.104212e+09] 
+  CPUt for computing S         = 14.97 s
+  average CPUt for H̃           = 12.22 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9139768682.3  (25.09 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9115488752.7  (24.94 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9071511729.9  (25.68 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9093483666.2  (26.0 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9090296637.9  (25.71 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9041201583.8  (25.33 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9027158706.1  (26.02 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9069283373.3  (25.66 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9017389337.9  (25.29 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9124764332.7  (26.25 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9072777882.1  (26.27 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9079876215.3  (27.09 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9118765930.9  (27.75 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9004990507.5  (27.06 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9045485112.5  (26.6 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9095725845.6  (27.17 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9101139535.1  (27.0 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  8971617568.9  (25.36 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9123941671.5  (26.17 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  9087613452.6  (25.03 s)
+
+Analyze the results...
+  value H(S)                  = 9.076183e+09 
+  average value H̃             = 9.074614e+09 
+  average absolue error H̃     = 3.485418e+07 
+  average relative error H̃    = 0.003840 
+  confidence interval for 95% = [9.053753e+09, 9.095475e+09] 
+  CPUt for computing S         = 14.97 s
+  average CPUt for H̃           = 26.07 s
+
+All average relative error H̃ = [0.02862745808962517, 0.01265040255464569, 0.009486657539748325, 0.007341144803823599, 0.005947994120215482, 0.0035166234951759822, 0.0038401802335004966]
+
+All CPUt with Gurobi.Optimizer = [0.24850000000000003, 1.2285, 2.565, 3.9775, 5.2170000000000005, 12.2235, 26.073500000000003]
+"/Users/gandibleux-x/Documents/GitHub/HypervolumeEstimator/H50-3.png"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Setup the parameters...
+  number of variables  : 75
+  number of objectives : 3
+  reference point      : [0, 0, 0]
+  interval of #weights : [(100, 100), (500, 500), (1000, 1000), (1500, 1500), (2000, 2000), (5000, 5000), (10000, 10000)]
+  solver MIP invoked   : Gurobi.Optimizer
+  number of trials     : 20
+
+Generate an mo01UKP instance...
+
+Compute S, the set of nondominated points...
+  |S|  = 708 (47.43)s)
+
+Compute H, the hypervolume measure...
+. H(S) = 2.916814e+10
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 100 weight:  28556330951.2  (0.43 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  28793420827.7  (0.26 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  28152741772.3  (0.25 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  29314937456.8  (0.28 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  28557549424.4  (0.29 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  27661342558.3  (0.21 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  29515090672.9  (0.21 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  27909236443.8  (0.26 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  28319397592.1  (0.2 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  28377354621.3  (0.22 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  30611951426.0  (0.3 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  30981105851.5  (0.25 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  28360608397.7  (0.23 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  27116615116.7  (0.26 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  30296629226.0  (0.29 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  30157125161.3  (0.29 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  29356550358.5  (0.29 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  30518085562.1  (0.32 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  29805997689.2  (0.33 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  28460300105.2  (0.27 s)
+
+Analyze the results...
+  value H(S)                  = 2.916814e+10 
+  average value H̃             = 2.904112e+10 
+  average absolue error H̃     = 9.314430e+08 
+  average relative error H̃    = 0.031934 
+  confidence interval for 95% = [2.853536e+10, 2.954688e+10] 
+  CPUt for computing S         = 47.43 s
+  average CPUt for H̃           = 0.27 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 500 weight:  28824984825.0  (1.27 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29859099066.8  (1.17 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29691360020.0  (1.37 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29010712409.3  (1.31 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  28604045376.1  (1.24 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  28544873185.0  (1.25 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29309964081.4  (1.38 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  28277155188.9  (1.28 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  28329181681.0  (1.21 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29631201073.2  (1.35 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29282298419.1  (1.38 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29348970938.0  (1.25 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  28972640212.2  (1.25 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29502690378.8  (1.45 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29406824517.8  (1.26 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29680773793.8  (1.22 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29128131843.2  (1.28 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29517234370.2  (1.35 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  28702802160.8  (1.18 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  29235887606.8  (1.13 s)
+
+Analyze the results...
+  value H(S)                  = 2.916814e+10 
+  average value H̃             = 2.914304e+10 
+  average absolue error H̃     = 3.867746e+08 
+  average relative error H̃    = 0.013260 
+  confidence interval for 95% = [2.892352e+10, 2.936257e+10] 
+  CPUt for computing S         = 47.43 s
+  average CPUt for H̃           = 1.28 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 1000 weight:  28914598513.3  (2.66 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  28749262627.7  (2.43 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29193299579.0  (2.61 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29568432271.4  (2.52 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29002409832.0  (2.63 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29145340830.8  (2.73 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29553568271.2  (2.61 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29532736508.9  (2.73 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  28816638368.3  (2.43 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  28639833389.3  (2.82 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  28840469213.2  (2.57 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29203537158.6  (2.78 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29835073637.6  (2.72 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29398652962.5  (2.65 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29116780908.3  (2.78 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29466959456.3  (2.71 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29089612832.1  (2.72 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  28967244455.5  (2.77 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29102870880.1  (2.58 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  29437685450.5  (2.99 s)
+
+Analyze the results...
+  value H(S)                  = 2.916814e+10 
+  average value H̃             = 2.917875e+10 
+  average absolue error H̃     = 2.570584e+08 
+  average relative error H̃    = 0.008813 
+  confidence interval for 95% = [2.902949e+10, 2.932801e+10] 
+  CPUt for computing S         = 47.43 s
+  average CPUt for H̃           = 2.67 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29340273944.0  (4.17 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29018208589.7  (3.99 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29045241094.3  (4.0 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29120894540.0  (4.21 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29326822583.0  (4.15 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29380090379.3  (4.38 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29100799049.2  (4.29 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29187238570.5  (4.32 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29069858281.4  (4.29 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29483806991.6  (4.56 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29213811965.0  (4.25 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29355541244.2  (4.45 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29261296907.4  (4.45 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29059262000.2  (4.45 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29795106341.9  (4.52 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29714990165.8  (4.62 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  28922413461.8  (4.52 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29413996227.9  (4.6 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  29360346523.6  (4.32 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  28850617672.8  (4.21 s)
+
+Analyze the results...
+  value H(S)                  = 2.916814e+10 
+  average value H̃             = 2.925103e+10 
+  average absolue error H̃     = 1.986729e+08 
+  average relative error H̃    = 0.006811 
+  confidence interval for 95% = [2.913716e+10, 2.936490e+10] 
+  CPUt for computing S         = 47.43 s
+  average CPUt for H̃           = 4.34 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 2000 weight:  28828272757.0  (5.74 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29086850372.1  (5.82 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29279681146.7  (5.98 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29152857975.0  (6.01 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29419069286.6  (6.05 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29031352359.2  (5.61 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  28743445028.0  (5.42 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29239330053.1  (5.57 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  28778742581.0  (5.5 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  28978264592.7  (5.98 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29001172827.0  (5.67 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29109567760.9  (5.77 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  28828611518.1  (5.46 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29266462537.2  (5.33 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29318721656.7  (5.39 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  28847630890.5  (5.05 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29326709187.8  (5.41 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29181924779.6  (5.43 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29369145322.8  (5.44 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  29189683169.2  (5.5 s)
+
+Analyze the results...
+  value H(S)                  = 2.916814e+10 
+  average value H̃             = 2.909887e+10 
+  average absolue error H̃     = 1.770122e+08 
+  average relative error H̃    = 0.006069 
+  confidence interval for 95% = [2.900038e+10, 2.919737e+10] 
+  CPUt for computing S         = 47.43 s
+  average CPUt for H̃           = 5.61 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29271769390.9  (13.51 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29122131224.6  (13.86 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29257503430.1  (13.8 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29107722669.9  (14.09 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29092320494.3  (14.34 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29129843571.6  (14.31 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29090153111.8  (14.84 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29074076702.8  (14.42 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29403662343.5  (14.95 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29300568654.2  (15.09 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29348318702.8  (15.26 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29090343264.7  (15.2 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29369647297.4  (15.77 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29177518509.5  (15.53 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29055126604.1  (14.79 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29271033017.9  (14.3 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29330265228.3  (14.1 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29367000500.7  (14.02 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29268682714.8  (14.06 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  29078354465.0  (14.23 s)
+
+Analyze the results...
+  value H(S)                  = 2.916814e+10 
+  average value H̃             = 2.921030e+10 
+  average absolue error H̃     = 1.094807e+08 
+  average relative error H̃    = 0.003753 
+  confidence interval for 95% = [2.915444e+10, 2.926616e+10] 
+  CPUt for computing S         = 47.43 s
+  average CPUt for H̃           = 14.52 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29368926411.7  (29.21 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29257689427.2  (29.39 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29139677358.9  (28.4 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29218073651.0  (29.2 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29175856235.6  (29.41 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29085554206.9  (29.58 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29031275626.0  (30.26 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29133288575.5  (29.24 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29026352913.0  (29.36 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29316457303.3  (28.29 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29185471779.4  (28.46 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29202677783.1  (28.71 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29349716953.6  (29.27 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29035866172.0  (29.53 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29047162813.8  (30.98 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29191480439.2  (30.71 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29254980334.8  (29.76 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  28907543211.8  (27.08 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29259158097.3  (27.19 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  29213417026.6  (27.64 s)
+
+Analyze the results...
+  value H(S)                  = 2.916814e+10 
+  average value H̃             = 2.917003e+10 
+  average absolue error H̃     = 9.573077e+07 
+  average relative error H̃    = 0.003282 
+  confidence interval for 95% = [2.911389e+10, 2.922617e+10] 
+  CPUt for computing S         = 47.43 s
+  average CPUt for H̃           = 29.08 s
+
+All average relative error H̃ = [0.03193357330933693, 0.013260173856510174, 0.00881298509275586, 0.006811297524854093, 0.006068681135909722, 0.00375343248767388, 0.0032820316435448185]
+
+All CPUt with Gurobi.Optimizer = [0.2720000000000001, 1.2790000000000001, 2.672, 4.3375, 5.6065, 14.523500000000002, 29.083499999999997]
+"/Users/gandibleux-x/Documents/GitHub/HypervolumeEstimator/H75-3.png"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Setup the parameters...
+  number of variables  : 100
+  number of objectives : 3
+  reference point      : [0, 0, 0]
+  interval of #weights : [(100, 100), (500, 500), (1000, 1000), (1500, 1500), (2000, 2000), (5000, 5000), (10000, 10000)]
+  solver MIP invoked   : Gurobi.Optimizer
+  number of trials     : 20
+
+Generate an mo01UKP instance...
+
+Compute S, the set of nondominated points...
+  |S|  = 4053 (1875.02)s)
+
+Compute H, the hypervolume measure...
+. H(S) = 7.113900e+10
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 100 weight:  68272032788.2  (0.73 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  70641650711.1  (0.48 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  68323367434.2  (0.48 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  70049070216.0  (0.46 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  69535685663.6  (0.49 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  67713713169.3  (0.46 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  71395658229.3  (0.54 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  68182851835.8  (0.51 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  68496919608.8  (0.41 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  70875440059.6  (0.49 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  74577465290.6  (0.63 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  74937558858.2  (0.57 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  68580213962.1  (0.56 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  66588470999.1  (0.48 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  76301847116.7  (0.52 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  74051302492.6  (0.51 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  71966243085.7  (0.51 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  75644759987.0  (0.54 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  73412978185.2  (0.68 s)
+  H estimated with rp=[0, 0, 0] and 100 weight:  69222548419.4  (0.48 s)
+
+Analyze the results...
+  value H(S)                  = 7.113900e+10 
+  average value H̃             = 7.093849e+10 
+  average absolue error H̃     = 2.518093e+09 
+  average relative error H̃    = 0.035397 
+  confidence interval for 95% = [6.955759e+10, 7.231939e+10] 
+  CPUt for computing S         = 1875.02 s
+  average CPUt for H̃           = 0.53 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 500 weight:  70313944001.8  (2.63 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  72265844944.3  (2.56 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  72698662497.4  (2.56 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  71071314209.9  (2.55 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  69722798262.8  (2.64 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  69656609619.1  (2.51 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  71203429024.7  (2.53 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  67813102992.2  (2.47 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  69510570293.1  (2.49 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  72599074755.8  (2.51 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  71944613629.5  (2.48 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  71327332944.7  (2.5 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  69946531921.9  (2.63 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  71963667009.1  (2.5 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  72563180302.3  (2.53 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  72281472648.4  (2.5 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  70955370806.6  (2.42 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  71168152585.3  (2.66 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  70375262169.3  (2.55 s)
+  H estimated with rp=[0, 0, 0] and 500 weight:  71803634060.6  (2.62 s)
+
+Analyze the results...
+  value H(S)                  = 7.113900e+10 
+  average value H̃             = 7.105923e+10 
+  average absolue error H̃     = 1.008778e+09 
+  average relative error H̃    = 0.014180 
+  confidence interval for 95% = [7.045669e+10, 7.166177e+10] 
+  CPUt for computing S         = 1875.02 s
+  average CPUt for H̃           = 2.54 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 1000 weight:  70509680108.8  (5.16 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  69548836735.2  (4.83 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  71589426109.7  (5.13 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  72452528837.7  (5.05 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  71166606725.2  (4.88 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  70999750511.2  (5.07 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  71523829658.9  (4.91 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  72366055196.1  (5.25 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  70437119978.8  (4.83 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  70113755649.5  (4.92 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  70192210659.4  (4.63 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  70846692199.1  (4.76 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  72443638416.4  (5.13 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  71805822073.7  (5.04 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  70798830543.1  (4.88 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  72276518684.5  (4.99 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  70632790602.4  (4.75 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  70698139410.0  (4.94 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  70499113114.1  (4.87 s)
+  H estimated with rp=[0, 0, 0] and 1000 weight:  71998229224.7  (5.35 s)
+
+Analyze the results...
+  value H(S)                  = 7.113900e+10 
+  average value H̃             = 7.114498e+10 
+  average absolue error H̃     = 7.311870e+08 
+  average relative error H̃    = 0.010278 
+  confidence interval for 95% = [7.074029e+10, 7.154967e+10] 
+  CPUt for computing S         = 1875.02 s
+  average CPUt for H̃           = 4.97 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 1500 weight:  71484674932.7  (7.47 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  71111775658.6  (7.61 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  70554849792.9  (7.94 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  71063567036.3  (7.86 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  71635857788.4  (7.97 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  71855062226.1  (7.89 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  71108146507.1  (7.31 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  71234543636.1  (7.62 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  70415288322.8  (7.69 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  71741263583.6  (7.69 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  71417902707.3  (7.32 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  72224221197.7  (7.88 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  71294239289.9  (7.31 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  70358363674.6  (7.44 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  72479992353.5  (7.45 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  72094607913.6  (7.64 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  70810556614.6  (7.53 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  72387218469.2  (7.81 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  71710998702.4  (8.1 s)
+  H estimated with rp=[0, 0, 0] and 1500 weight:  70776766522.9  (7.35 s)
+
+Analyze the results...
+  value H(S)                  = 7.113900e+10 
+  average value H̃             = 7.138799e+10 
+  average absolue error H̃     = 5.402630e+08 
+  average relative error H̃    = 0.007594 
+  confidence interval for 95% = [7.109184e+10, 7.168415e+10] 
+  CPUt for computing S         = 1875.02 s
+  average CPUt for H̃           = 7.64 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 2000 weight:  70160207640.9  (9.8 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  70726818752.1  (9.79 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  71822316664.4  (9.95 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  71063657259.6  (10.11 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  72143817663.2  (10.22 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  70852845454.1  (10.09 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  70250251290.7  (9.65 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  71477086842.9  (10.07 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  70067986821.6  (9.78 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  70974519141.1  (9.52 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  70663794594.1  (9.36 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  71596348335.4  (9.66 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  70562258968.2  (9.89 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  71285562827.2  (9.78 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  72233508493.6  (9.83 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  70513126359.8  (9.63 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  71435752636.3  (10.19 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  71200276230.6  (10.51 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  72003459329.7  (10.4 s)
+  H estimated with rp=[0, 0, 0] and 2000 weight:  71274545723.4  (10.44 s)
+
+Analyze the results...
+  value H(S)                  = 7.113900e+10 
+  average value H̃             = 7.111541e+10 
+  average absolue error H̃     = 5.318604e+08 
+  average relative error H̃    = 0.007476 
+  confidence interval for 95% = [7.081180e+10, 7.141901e+10] 
+  CPUt for computing S         = 1875.02 s
+  average CPUt for H̃           = 9.93 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71191593218.5  (26.0 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  70988959959.9  (26.1 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71588392588.3  (25.16 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71066782049.8  (23.84 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71231918185.1  (24.59 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  70784017219.5  (23.56 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  70685939002.2  (24.6 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71093736447.5  (25.16 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71748616475.3  (26.19 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71421863139.6  (26.66 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71702673177.1  (27.02 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71007182524.4  (26.63 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71481579214.8  (26.93 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71134170785.5  (24.97 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  70777053071.7  (23.6 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71242745187.8  (24.41 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71675926029.0  (24.83 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71542028102.5  (25.68 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71344938666.4  (26.09 s)
+  H estimated with rp=[0, 0, 0] and 5000 weight:  71204721188.2  (25.3 s)
+
+Analyze the results...
+  value H(S)                  = 7.113900e+10 
+  average value H̃             = 7.124574e+10 
+  average absolue error H̃     = 2.641572e+08 
+  average relative error H̃    = 0.003713 
+  confidence interval for 95% = [7.109814e+10, 7.139335e+10] 
+  CPUt for computing S         = 1875.02 s
+  average CPUt for H̃           = 25.37 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71488973793.2  (50.14 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71109888552.7  (49.2 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71000670552.6  (49.23 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71416018132.4  (49.89 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71109043244.6  (51.21 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  70868091987.5  (53.97 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  70889848255.3  (53.19 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71077357709.4  (52.07 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  70861681426.5  (51.34 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71499332803.8  (51.35 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71118470642.7  (51.06 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71334922934.1  (52.04 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71793881163.3  (53.3 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  70945567732.8  (52.33 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  70976205330.4  (51.4 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71110396021.8  (51.56 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71418337424.3  (52.84 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  70544326047.1  (52.86 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71473426287.3  (52.16 s)
+  H estimated with rp=[0, 0, 0] and 10000 weight:  71353461041.5  (48.4 s)
+
+Analyze the results...
+  value H(S)                  = 7.113900e+10 
+  average value H̃             = 7.116950e+10 
+  average absolue error H̃     = 2.361408e+08 
+  average relative error H̃    = 0.003319 
+  confidence interval for 95% = [7.103077e+10, 7.130822e+10] 
+  CPUt for computing S         = 1875.02 s
+  average CPUt for H̃           = 51.48 s
+
+All average relative error H̃ = [0.0353967979381885, 0.014180375546499067, 0.010278285935142475, 0.007594469168144648, 0.007476354819808235, 0.0037132546622856886, 0.0033194277313089355]
+
+All CPUt with Gurobi.Optimizer = [0.5265000000000001, 2.542, 4.9685, 7.644, 9.933499999999999, 25.366, 51.477]
+"/Users/gandibleux-x/Documents/GitHub/HypervolumeEstimator/H100-3.png"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Setup the parameters...
+  number of variables  : 25
+  number of objectives : 2
+  reference point      : [0, 0]
+  interval of #weights : [(100, 100), (500, 500), (1000, 1000), (1500, 1500), (2000, 2000), (5000, 5000), (10000, 10000)]
+  solver MIP invoked   : Gurobi.Optimizer
+  number of trials     : 20
+
+Generate an mo01UKP instance...
+
+Compute S, the set of nondominated points...
+  |S|  = 10 (0.15)s)
+
+Compute H, the hypervolume measure...
+. H(S) = 1.068810e+06
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0] and 100 weight:  1054512.7  (0.33 s)
+  H estimated with rp=[0, 0] and 100 weight:  1055774.9  (0.17 s)
+  H estimated with rp=[0, 0] and 100 weight:  1053087.5  (0.18 s)
+  H estimated with rp=[0, 0] and 100 weight:  1081501.8  (0.17 s)
+  H estimated with rp=[0, 0] and 100 weight:  1011519.2  (0.17 s)
+  H estimated with rp=[0, 0] and 100 weight:  1043370.3  (0.17 s)
+  H estimated with rp=[0, 0] and 100 weight:  1084640.7  (0.2 s)
+  H estimated with rp=[0, 0] and 100 weight:  1052727.4  (0.17 s)
+  H estimated with rp=[0, 0] and 100 weight:  1059094.0  (0.17 s)
+  H estimated with rp=[0, 0] and 100 weight:  1081483.1  (0.17 s)
+  H estimated with rp=[0, 0] and 100 weight:  1095060.7  (0.18 s)
+  H estimated with rp=[0, 0] and 100 weight:  1044217.4  (0.18 s)
+  H estimated with rp=[0, 0] and 100 weight:  1053852.9  (0.17 s)
+  H estimated with rp=[0, 0] and 100 weight:  1022802.5  (0.17 s)
+  H estimated with rp=[0, 0] and 100 weight:  1046656.1  (0.18 s)
+  H estimated with rp=[0, 0] and 100 weight:  1107021.9  (0.19 s)
+  H estimated with rp=[0, 0] and 100 weight:  1087197.4  (0.17 s)
+  H estimated with rp=[0, 0] and 100 weight:  1118439.8  (0.18 s)
+  H estimated with rp=[0, 0] and 100 weight:  1094197.1  (0.18 s)
+  H estimated with rp=[0, 0] and 100 weight:  1053830.6  (0.19 s)
+
+Analyze the results...
+  value H(S)                  = 1.068810e+06 
+  average value H̃             = 1.065049e+06 
+  average absolue error H̃     = 2.366686e+04 
+  average relative error H̃    = 0.022143 
+  confidence interval for 95% = [1.052143e+06, 1.077956e+06] 
+  CPUt for computing S         = 0.15 s
+  average CPUt for H̃           = 0.18 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0] and 500 weight:  1067010.5  (0.86 s)
+  H estimated with rp=[0, 0] and 500 weight:  1070748.9  (0.84 s)
+  H estimated with rp=[0, 0] and 500 weight:  1077299.1  (0.82 s)
+  H estimated with rp=[0, 0] and 500 weight:  1088711.8  (0.82 s)
+  H estimated with rp=[0, 0] and 500 weight:  1062457.0  (0.83 s)
+  H estimated with rp=[0, 0] and 500 weight:  1072715.9  (0.91 s)
+  H estimated with rp=[0, 0] and 500 weight:  1055084.0  (0.87 s)
+  H estimated with rp=[0, 0] and 500 weight:  1052215.9  (0.87 s)
+  H estimated with rp=[0, 0] and 500 weight:  1052652.4  (0.84 s)
+  H estimated with rp=[0, 0] and 500 weight:  1052867.3  (0.83 s)
+  H estimated with rp=[0, 0] and 500 weight:  1061444.1  (0.82 s)
+  H estimated with rp=[0, 0] and 500 weight:  1077442.9  (0.86 s)
+  H estimated with rp=[0, 0] and 500 weight:  1064407.6  (0.87 s)
+  H estimated with rp=[0, 0] and 500 weight:  1060256.8  (0.82 s)
+  H estimated with rp=[0, 0] and 500 weight:  1060014.8  (0.9 s)
+  H estimated with rp=[0, 0] and 500 weight:  1072975.8  (0.83 s)
+  H estimated with rp=[0, 0] and 500 weight:  1085198.4  (0.84 s)
+  H estimated with rp=[0, 0] and 500 weight:  1074304.5  (0.86 s)
+  H estimated with rp=[0, 0] and 500 weight:  1061219.6  (0.87 s)
+  H estimated with rp=[0, 0] and 500 weight:  1066821.9  (0.84 s)
+
+Analyze the results...
+  value H(S)                  = 1.068810e+06 
+  average value H̃             = 1.066792e+06 
+  average absolue error H̃     = 8.909259e+03 
+  average relative error H̃    = 0.008336 
+  confidence interval for 95% = [1.061867e+06, 1.071718e+06] 
+  CPUt for computing S         = 0.15 s
+  average CPUt for H̃           = 0.85 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0] and 1000 weight:  1063327.0  (1.72 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1078861.8  (1.71 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1079838.7  (1.76 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1065099.5  (1.73 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1055784.7  (1.69 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1069141.8  (1.7 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1066557.9  (1.69 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1062007.4  (1.63 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1058885.0  (1.69 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1072583.0  (1.67 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1065225.1  (1.73 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1068892.7  (1.67 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1069527.5  (1.69 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1070520.1  (1.63 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1064651.6  (1.67 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1069002.2  (1.58 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1069428.3  (1.67 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1066089.7  (1.81 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1060928.5  (1.7 s)
+  H estimated with rp=[0, 0] and 1000 weight:  1057210.7  (1.74 s)
+
+Analyze the results...
+  value H(S)                  = 1.068810e+06 
+  average value H̃             = 1.066678e+06 
+  average absolue error H̃     = 4.982455e+03 
+  average relative error H̃    = 0.004662 
+  confidence interval for 95% = [1.063743e+06, 1.069614e+06] 
+  CPUt for computing S         = 0.15 s
+  average CPUt for H̃           = 1.69 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0] and 1500 weight:  1068738.0  (2.68 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1069887.9  (2.48 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1065939.8  (2.71 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1071128.9  (2.51 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1061073.0  (2.71 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1070674.0  (2.57 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1083878.2  (2.62 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1063719.3  (2.69 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1066219.6  (2.63 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1071496.6  (2.64 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1080657.1  (2.62 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1074224.6  (2.59 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1066767.6  (2.67 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1080164.6  (2.47 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1069896.3  (2.54 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1068826.3  (2.64 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1061791.1  (2.56 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1074695.7  (2.63 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1070443.7  (2.6 s)
+  H estimated with rp=[0, 0] and 1500 weight:  1060889.4  (2.61 s)
+
+Analyze the results...
+  value H(S)                  = 1.068810e+06 
+  average value H̃             = 1.070056e+06 
+  average absolue error H̃     = 4.779817e+03 
+  average relative error H̃    = 0.004472 
+  confidence interval for 95% = [1.067082e+06, 1.073030e+06] 
+  CPUt for computing S         = 0.15 s
+  average CPUt for H̃           = 2.61 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0] and 2000 weight:  1069102.5  (3.44 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1067390.2  (3.45 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1067430.8  (3.47 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1070080.8  (3.33 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1072251.4  (3.16 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1069139.1  (3.39 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1070607.1  (3.22 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1064065.2  (3.28 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1066748.0  (3.46 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1081769.3  (3.29 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1074038.2  (3.53 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1060731.8  (3.11 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1069566.4  (3.3 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1073554.7  (3.2 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1069704.0  (3.31 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1065117.5  (3.15 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1070116.9  (3.27 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1073235.4  (3.18 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1069264.6  (3.13 s)
+  H estimated with rp=[0, 0] and 2000 weight:  1067471.3  (3.13 s)
+
+Analyze the results...
+  value H(S)                  = 1.068810e+06 
+  average value H̃             = 1.069569e+06 
+  average absolue error H̃     = 3.030784e+03 
+  average relative error H̃    = 0.002836 
+  confidence interval for 95% = [1.067539e+06, 1.071599e+06] 
+  CPUt for computing S         = 0.15 s
+  average CPUt for H̃           = 3.29 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0] and 5000 weight:  1068950.1  (7.61 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1068180.3  (7.69 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1062468.8  (7.72 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1069124.8  (8.04 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1066819.6  (6.53 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1067190.2  (6.22 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1073284.7  (6.15 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1069830.2  (6.02 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1069156.0  (5.92 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1068603.1  (5.95 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1068147.9  (6.02 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1065802.0  (6.01 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1070413.7  (6.07 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1069802.8  (6.07 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1065178.5  (6.09 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1071593.8  (6.16 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1068613.3  (6.16 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1071178.5  (6.18 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1067878.1  (6.18 s)
+  H estimated with rp=[0, 0] and 5000 weight:  1064703.3  (6.25 s)
+
+Analyze the results...
+  value H(S)                  = 1.068810e+06 
+  average value H̃             = 1.068346e+06 
+  average absolue error H̃     = 1.868486e+03 
+  average relative error H̃    = 0.001748 
+  confidence interval for 95% = [1.067162e+06, 1.069530e+06] 
+  CPUt for computing S         = 0.15 s
+  average CPUt for H̃           = 6.45 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0] and 10000 weight:  1070798.5  (12.84 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1068544.5  (13.5 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1073991.2  (14.0 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1064985.6  (14.25 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1072263.0  (14.61 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1067158.8  (14.46 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1071367.6  (15.06 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1070282.9  (15.72 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1072227.1  (14.62 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1070622.4  (14.98 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1069783.2  (14.09 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1068262.8  (14.6 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1069315.6  (14.77 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1066502.3  (14.78 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1066653.8  (14.69 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1068136.1  (14.72 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1069489.6  (15.11 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1066974.2  (15.44 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1069087.5  (16.03 s)
+  H estimated with rp=[0, 0] and 10000 weight:  1068744.9  (15.68 s)
+
+Analyze the results...
+  value H(S)                  = 1.068810e+06 
+  average value H̃             = 1.069260e+06 
+  average absolue error H̃     = 1.782271e+03 
+  average relative error H̃    = 0.001668 
+  confidence interval for 95% = [1.068210e+06, 1.070309e+06] 
+  CPUt for computing S         = 0.15 s
+  average CPUt for H̃           = 14.70 s
+
+All average relative error H̃ = [0.022143183825573027, 0.00833568111890678, 0.004661684040219317, 0.0044720920510037555, 0.002835661948984063, 0.0017481930885417895, 0.0016675287755246286]
+
+All CPUt with Gurobi.Optimizer = [0.1845, 0.85, 1.6940000000000002, 2.6085000000000003, 3.2900000000000005, 6.452, 14.6975]
+"/Users/gandibleux-x/Documents/GitHub/HypervolumeEstimator/H25-2.png"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Setup the parameters...
+  number of variables  : 25
+  number of objectives : 4
+  reference point      : [0, 0, 0, 0]
+  interval of #weights : [(100, 100), (500, 500), (1000, 1000), (1500, 1500), (2000, 2000), (5000, 5000), (10000, 10000)]
+  solver MIP invoked   : Gurobi.Optimizer
+  number of trials     : 20
+
+Generate an mo01UKP instance...
+
+Compute S, the set of nondominated points...
+  |S|  = 310 (99.08)s)
+
+Compute H, the hypervolume measure...
+. H(S) = 9.961181e+11
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  993475832476.6  (0.35 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  979745202038.1  (0.18 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  942047415673.0  (0.19 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  991238711260.4  (0.18 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  977221076555.4  (0.18 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  967633612103.3  (0.18 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  952735147459.4  (0.18 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  1066597963866.6  (0.2 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  966077635119.2  (0.18 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  914065104392.5  (0.17 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  997083004768.0  (0.18 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  1010718052000.9  (0.18 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  970743178769.0  (0.19 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  1048944746760.2  (0.19 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  1021794196474.7  (0.18 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  1000018642552.3  (0.17 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  965655438399.2  (0.18 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  1004380493558.3  (0.18 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  996929026698.4  (0.18 s)
+  H estimated with rp=[0, 0, 0, 0] and 100 weight:  1032503994774.4  (0.19 s)
+
+Analyze the results...
+  value H(S)                  = 9.961181e+11 
+  average value H̃             = 9.899804e+11 
+  average absolue error H̃     = 2.752840e+10 
+  average relative error H̃    = 0.027636 
+  confidence interval for 95% = [9.730834e+11, 1.006877e+12] 
+  CPUt for computing S         = 99.08 s
+  average CPUt for H̃           = 0.19 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  1014812347560.8  (0.97 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  992883385477.7  (0.95 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  970643166446.8  (0.98 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  1007179844602.6  (0.95 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  958420286132.7  (0.87 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  976740153864.7  (0.83 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  1008431071321.0  (0.92 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  1027755706841.7  (0.97 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  978401439432.3  (0.98 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  1003014180748.4  (0.95 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  1022851026084.3  (0.87 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  1002426384788.7  (0.87 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  974070651417.1  (0.84 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  1002960475453.0  (0.87 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  979490714549.2  (0.92 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  976554345198.0  (0.93 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  952558067136.5  (0.94 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  1016570929786.1  (0.91 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  979593593558.0  (0.86 s)
+  H estimated with rp=[0, 0, 0, 0] and 500 weight:  1008813624697.6  (0.9 s)
+
+Analyze the results...
+  value H(S)                  = 9.961181e+11 
+  average value H̃             = 9.927086e+11 
+  average absolue error H̃     = 1.877299e+10 
+  average relative error H̃    = 0.018846 
+  confidence interval for 95% = [9.825759e+11, 1.002841e+12] 
+  CPUt for computing S         = 99.08 s
+  average CPUt for H̃           = 0.91 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  988411030325.4  (1.74 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  987693132984.8  (1.77 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  1018753614195.3  (1.84 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  985278466419.9  (1.74 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  987385776708.7  (1.81 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  987157211229.1  (1.91 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  1013780179334.6  (1.83 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  993460001985.7  (1.89 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  1017015289355.8  (1.87 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  996771540986.7  (1.83 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  986857017156.4  (1.82 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  991082168188.4  (1.86 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  1005624802570.2  (1.86 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  1014921258051.7  (1.85 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  1010929772130.7  (1.72 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  997191537203.1  (1.82 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  994348529482.0  (1.87 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  996082439594.2  (1.81 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  1001472723843.0  (1.82 s)
+  H estimated with rp=[0, 0, 0, 0] and 1000 weight:  996546712535.9  (1.88 s)
+
+Analyze the results...
+  value H(S)                  = 9.961181e+11 
+  average value H̃             = 9.985382e+11 
+  average absolue error H̃     = 8.762583e+09 
+  average relative error H̃    = 0.008797 
+  confidence interval for 95% = [9.933184e+11, 1.003758e+12] 
+  CPUt for computing S         = 99.08 s
+  average CPUt for H̃           = 1.83 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  1015171238052.3  (2.75 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  977078420238.7  (2.76 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  991349814594.1  (2.8 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  1010624878101.4  (2.84 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  977673890021.7  (2.81 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  1008875015641.6  (2.83 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  1003031067250.3  (2.75 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  994885112111.7  (2.79 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  990426535922.7  (2.67 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  995751241351.0  (2.73 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  1009156227012.1  (2.93 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  982531171441.9  (2.68 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  989213522776.3  (2.73 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  1004713214428.1  (2.82 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  1003547613996.9  (2.74 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  993315222052.6  (2.81 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  983544491976.1  (2.69 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  988790653771.7  (2.85 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  998452798237.7  (2.8 s)
+  H estimated with rp=[0, 0, 0, 0] and 1500 weight:  992771095956.0  (2.8 s)
+
+Analyze the results...
+  value H(S)                  = 9.961181e+11 
+  average value H̃             = 9.955452e+11 
+  average absolue error H̃     = 9.035659e+09 
+  average relative error H̃    = 0.009071 
+  confidence interval for 95% = [9.903908e+11, 1.000700e+12] 
+  CPUt for computing S         = 99.08 s
+  average CPUt for H̃           = 2.78 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  982564606947.7  (3.95 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  988715553134.0  (3.83 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  1023248450886.4  (3.77 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  985167820530.3  (3.82 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  992676900670.7  (3.7 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  999494873462.8  (3.81 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  1005939898430.7  (3.83 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  997450455929.0  (3.77 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  995726274586.7  (3.78 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  989137139947.6  (3.83 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  991576945190.3  (3.67 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  1001826146063.2  (3.76 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  991373658529.2  (3.67 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  983394759236.0  (3.79 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  984369269421.8  (3.76 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  1001879489563.3  (3.75 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  994332808898.8  (3.78 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  989907539789.1  (3.78 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  997411682860.7  (3.73 s)
+  H estimated with rp=[0, 0, 0, 0] and 2000 weight:  1001732215607.7  (3.73 s)
+
+Analyze the results...
+  value H(S)                  = 9.961181e+11 
+  average value H̃             = 9.948963e+11 
+  average absolue error H̃     = 7.225612e+09 
+  average relative error H̃    = 0.007254 
+  confidence interval for 95% = [9.904450e+11, 9.993477e+11] 
+  CPUt for computing S         = 99.08 s
+  average CPUt for H̃           = 3.78 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  1007726301584.1  (9.55 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  1005819295199.6  (9.47 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  999877617111.4  (9.48 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  985301082889.7  (9.28 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  991630882395.7  (9.48 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  995579599390.1  (9.83 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  995163346456.4  (9.57 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  996928654771.2  (9.47 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  1005748279030.9  (9.38 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  1001953150077.8  (9.47 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  1001360374915.9  (9.56 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  997650823855.2  (9.05 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  1000194206376.4  (8.98 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  993516735211.7  (9.05 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  997717713429.8  (9.32 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  1002639474354.0  (8.91 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  1002424630866.4  (8.74 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  996113456349.9  (9.04 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  988945280757.6  (8.88 s)
+  H estimated with rp=[0, 0, 0, 0] and 5000 weight:  994842317393.9  (8.89 s)
+
+Analyze the results...
+  value H(S)                  = 9.961181e+11 
+  average value H̃             = 9.980567e+11 
+  average absolue error H̃     = 4.723776e+09 
+  average relative error H̃    = 0.004742 
+  confidence interval for 95% = [9.953729e+11, 1.000740e+12] 
+  CPUt for computing S         = 99.08 s
+  average CPUt for H̃           = 9.27 s
+
+Compute H̃, the estimation of H...
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  993314167259.9  (17.22 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  993195800223.8  (17.58 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  997021032328.2  (17.92 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  993816254358.1  (17.71 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  1001945979965.2  (17.75 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  992650193101.4  (18.11 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  993299873675.5  (18.63 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  1003593505514.1  (18.53 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  997424822679.0  (18.43 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  995802579181.6  (19.3 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  998794490937.0  (19.05 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  996564915805.6  (18.63 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  989091591417.7  (18.21 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  991655367605.3  (17.71 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  1002661771087.5  (18.06 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  998408056054.0  (17.88 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  996542474176.6  (17.86 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  1001691658693.8  (17.22 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  996304587633.0  (16.79 s)
+  H estimated with rp=[0, 0, 0, 0] and 10000 weight:  994756867929.1  (17.02 s)
+
+Analyze the results...
+  value H(S)                  = 9.961181e+11 
+  average value H̃             = 9.964268e+11 
+  average absolue error H̃     = 3.056723e+09 
+  average relative error H̃    = 0.003069 
+  confidence interval for 95% = [9.945981e+11, 9.982555e+11] 
+  CPUt for computing S         = 99.08 s
+  average CPUt for H̃           = 17.98 s
+
+All average relative error H̃ = [0.02763567542143546, 0.018846148784853755, 0.008796731063939925, 0.009070871313722317, 0.007253770232927346, 0.004742185007750137, 0.0030686347991930154]
+
+All CPUt with Gurobi.Optimizer = [0.1905, 0.9139999999999997, 1.8270000000000004, 2.779, 3.7755, 9.27, 17.980500000000003]
+"/Users/gandibleux-x/Documents/GitHub/HypervolumeEstimator/H25-4.png"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+

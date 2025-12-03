@@ -21,7 +21,8 @@
 using Printf
 using Random
        
-using JuMP, GLPK                         # for solving MILP (I)
+#using JuMP, GLPK                         # for solving MILP (I)
+using JuMP, Gurobi                         # for solving MILP (I)
 #using HiGHS, Gurobi, CPLEX              # for solving MILP (II)
 import MultiObjectiveAlgorithms as MOA   # for computing the set of nondominated points
 using Distributions                      # for computing the weights and CI (home version)
@@ -30,7 +31,7 @@ using HypothesisTests                    # for computing the confidence interval
 using Statistics                         # for computing the confidence interval (home version)
 using Plots                              # for drawing the figure (evolution of the avg relative error)
 
-Random.seed!(1234)
+Random.seed!(12345)
 
 include("src/instanceMO01UKP.jl")
 include("src/solveMO01UKP.jl")
@@ -58,9 +59,9 @@ oneExpe = resultsExpe(  [100,500,1000,1500,2000,5000,10000],
 
 # =============================================================================
 println("Setup the parameters...")
-solver = GLPK.Optimizer
+#solver = GLPK.Optimizer
 #solver = HiGHS.Optimizer
-#solver = Gurobi.Optimizer
+solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
 n = 10    # number of variables
 o = 3     # number of objectives
@@ -117,7 +118,8 @@ open(instanceName*".res", "w") do ioAll
         run(pipeline(`./src/hv -r "0 0 0 0 0 0" HVpoints`, stdout="HVmeasure"))
     end
     Hmeasure = read_Hmeasure("HVmeasure")
-    @printf(". H(S) = %.1f\n", Hmeasure)
+    #@printf(". H(S) = %.1f\n", Hmeasure)
+    @printf(". H(S) = %1.6e\n", Hmeasure)    
     oneExpe.Hmeasure = Hmeasure
 
     write(ioAll, string("H(S) = ",Hmeasure, " \n"))
@@ -125,7 +127,7 @@ open(instanceName*".res", "w") do ioAll
 
 
     # reset the random generator
-    Random.seed!(1234)
+    Random.seed!(12345)
 
     # =============================================================================
     for iWeight in 1:length(listrndWeights)
@@ -163,12 +165,12 @@ open(instanceName*".res", "w") do ioAll
         aaeH̃ = average_absolue_error(Hmeasure, listH̃)
         areH̃ = average_relative_error(Hmeasure, listH̃)
 
-        @printf("  value H(S)                  = %.1f \n", Hmeasure)
-        @printf("  average value H̃             = %.1f \n", avH̃)
-        @printf("  average absolue error H̃     = %.1f \n", aaeH̃)
+        @printf("  value H(S)                  = %1.6e \n", Hmeasure)
+        @printf("  average value H̃             = %1.6e \n", avH̃)
+        @printf("  average absolue error H̃     = %1.6e \n", aaeH̃)
         @printf("  average relative error H̃    = %.6f \n", areH̃)
         #@printf("  confidence interval for 95%% = [%.1f, %.1f] \n", ci[1], ci[2])
-        @printf("  confidence interval for 95%% = [%.1f, %.1f] \n",CIlow, CIHigh)
+        @printf("  confidence interval for 95%% = [%1.6e, %1.6e] \n",CIlow, CIHigh)
         @printf("  CPUt for computing S         = %.2f s\n", t_elapsedS)
         @printf("  average CPUt for H̃           = %.2f s\n", avCPUt)    
         push!(allareH̃, areH̃)

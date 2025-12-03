@@ -1,0 +1,305 @@
+Random.seed!(1234)
+
+--------------------------------------------------------------------------------
+  number of variables  : 100
+  number of objectives : 2
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.727277e+07  (7.33 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.606186e+07  (8.27 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.534679e+07  (6.78 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.682399e+07  (4.88 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.708294e+07  (7.65 s)
+
+  average CPUt for H̃           = 6.98 s
+--------------------------------------------------------------------------------
+  number of variables  : 100
+  number of objectives : 3
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  6.301429e+10  (8.63 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  6.819976e+10  (6.43 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  6.363336e+10  (8.76 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  7.268854e+10  (6.11 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  7.217213e+10  (7.8 s)
+
+  average CPUt for H̃           = 7.55 s
+--------------------------------------------------------------------------------
+  number of variables  : 100
+  number of objectives : 5
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.218849e+18  (11.72 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  8.845073e+17  (10.48 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.192561e+18  (11.69 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  9.997684e+17  (10.9 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  9.131136e+17  (10.39 s)
+
+  average CPUt for H̃           = 11.04 s
+--------------------------------------------------------------------------------
+  number of variables  : 100
+  number of objectives : 10
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  9.156001e+35  (16.73 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  1.283170e+36  (14.27 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  1.014705e+36  (17.72 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.862706e+35  (19.71 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  1.158601e+36  (15.99 s)
+
+  average CPUt for H̃           = 16.88 s
+--------------------------------------------------------------------------------
+  number of variables  : 250
+  number of objectives : 2
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.082833e+08  (10.92 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.073879e+08  (14.19 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.029508e+08  (9.89 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.060252e+08  (12.85 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  9.931003e+07  (11.52 s)
+
+  average CPUt for H̃           = 11.87 s
+--------------------------------------------------------------------------------
+  number of variables  : 250
+  number of objectives : 3
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  1.025435e+12  (19.69 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  1.152333e+12  (18.35 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  1.045558e+12  (21.75 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  1.002421e+12  (20.35 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  9.390197e+11  (20.77 s)
+
+  average CPUt for H̃           = 20.18 s
+--------------------------------------------------------------------------------
+  number of variables  : 250
+  number of objectives : 5
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  9.666284e+19  (25.73 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.102398e+20  (27.6 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  9.602601e+19  (31.77 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  8.573165e+19  (29.54 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.209625e+20  (25.99 s)
+
+  average CPUt for H̃           = 28.13 s
+--------------------------------------------------------------------------------
+  number of variables  : 250
+  number of objectives : 10
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.601963e+39  (42.93 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.610023e+39  (41.19 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  1.186352e+40  (43.11 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  9.676312e+39  (44.52 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  7.992798e+39  (50.65 s)
+
+  average CPUt for H̃           = 44.48 s
+--------------------------------------------------------------------------------
+  number of variables  : 500
+  number of objectives : 2
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  4.099213e+08  (19.16 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  4.111954e+08  (20.61 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  4.175553e+08  (17.63 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  4.140390e+08  (17.4 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  4.155015e+08  (19.38 s)
+
+  average CPUt for H̃           = 18.84 s
+--------------------------------------------------------------------------------
+  number of variables  : 500
+  number of objectives : 3
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  8.048464e+12  (27.26 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  7.651541e+12  (20.05 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  8.571388e+12  (24.94 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  8.557524e+12  (25.22 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  7.936573e+12  (21.9 s)
+
+  average CPUt for H̃           = 23.87 s
+--------------------------------------------------------------------------------
+  number of variables  : 500
+  number of objectives : 5
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  3.117752e+21  (38.17 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  2.840251e+21  (37.92 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  3.142402e+21  (41.64 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  3.182259e+21  (37.04 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  3.098672e+21  (38.77 s)
+
+  average CPUt for H̃           = 38.71 s
+--------------------------------------------------------------------------------
+  number of variables  : 500
+  number of objectives : 10
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  7.581211e+42  (69.27 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.860545e+42  (63.73 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  7.864096e+42  (66.98 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  9.556694e+42  (64.52 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.291506e+42  (62.09 s)
+
+  average CPUt for H̃           = 65.32 s
+--------------------------------------------------------------------------------
+  number of variables  : 1000
+  number of objectives : 2
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.597588e+09  (25.02 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.691878e+09  (10.48 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.600433e+09  (22.39 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.612349e+09  (25.13 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.656647e+09  (26.55 s)
+
+  average CPUt for H̃           = 21.91 s
+--------------------------------------------------------------------------------
+  number of variables  : 1000
+  number of objectives : 3
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  6.560297e+13  (15.63 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  6.385199e+13  (15.71 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  6.648927e+13  (16.21 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  6.957124e+13  (16.4 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  6.356784e+13  (16.34 s)
+
+  average CPUt for H̃           = 16.06 s
+--------------------------------------------------------------------------------
+  number of variables  : 1000
+  number of objectives : 5
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.059214e+23  (26.57 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.014014e+23  (30.67 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.001483e+23  (24.7 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.060381e+23  (27.87 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.049647e+23  (26.22 s)
+
+  average CPUt for H̃           = 27.21 s
+--------------------------------------------------------------------------------
+  number of variables  : 1000
+  number of objectives : 10
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  9.082911e+45  (58.52 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.917189e+45  (49.92 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.288195e+45  (52.93 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  9.897712e+45  (49.69 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  9.432942e+45  (55.78 s)
+
+  average CPUt for H̃           = 53.37 s
+--------------------------------------------------------------------------------
+  number of variables  : 2500
+  number of objectives : 2
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.019770e+10  (26.46 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.013047e+10  (25.61 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.038214e+10  (25.23 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.028038e+10  (25.62 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  1.053479e+10  (25.24 s)
+
+  average CPUt for H̃           = 25.63 s
+--------------------------------------------------------------------------------
+  number of variables  : 2500
+  number of objectives : 3
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  1.036912e+15  (30.22 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  1.030271e+15  (30.95 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  1.052922e+15  (29.88 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  1.005824e+15  (31.0 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  1.035787e+15  (35.64 s)
+
+  average CPUt for H̃           = 31.54 s
+--------------------------------------------------------------------------------
+  number of variables  : 2500
+  number of objectives : 5
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  9.444477e+24  (45.52 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.032436e+25  (45.45 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.026213e+25  (44.06 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.023798e+25  (44.26 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  1.031795e+25  (44.7 s)
+
+  average CPUt for H̃           = 44.80 s
+--------------------------------------------------------------------------------
+  number of variables  : 2500
+  number of objectives : 10
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.808657e+49  (82.03 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  9.475228e+49  (82.03 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.768341e+49  (83.06 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.658813e+49  (82.05 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.846952e+49  (82.14 s)
+
+  average CPUt for H̃           = 82.26 s
+--------------------------------------------------------------------------------
+  number of variables  : 5000
+  number of objectives : 2
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  4.078191e+10  (55.48 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  4.239231e+10  (58.74 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  4.091981e+10  (54.48 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  4.182526e+10  (54.82 s)
+    Compute H̃ : H estimated with rp=[0, 0] and 2000 weight:  4.097648e+10  (56.56 s)
+
+  average CPUt for H̃           = 56.02 s
+--------------------------------------------------------------------------------
+  number of variables  : 5000
+  number of objectives : 3
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  8.173416e+15  (70.81 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  8.509054e+15  (84.59 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  8.364620e+15  (72.55 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  8.116633e+15  (71.37 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0] and 2000 weight:  8.206717e+15  (80.51 s)
+
+  average CPUt for H̃           = 75.97 s
+--------------------------------------------------------------------------------
+  number of variables  : 5000
+  number of objectives : 5
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  3.242776e+26  (108.32 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  3.186836e+26  (105.56 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  3.178626e+26  (105.73 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  3.219714e+26  (106.77 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0] and 2000 weight:  3.255162e+26  (104.39 s)
+
+  average CPUt for H̃           = 106.15 s
+--------------------------------------------------------------------------------
+  number of variables  : 5000
+  number of objectives : 10
+  solver MIP invoked   : Gurobi.Optimizer
+
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.985766e+52  (193.68 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  8.599432e+52  (193.74 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  9.080509e+52  (189.4 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  9.170577e+52  (192.79 s)
+    Compute H̃ : H estimated with rp=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and 2000 weight:  9.116107e+52  (191.97 s)
+
+  average CPUt for H̃           = 192.32 s
+"/Users/gandibleux-x/Documents/GitHub/HypervolumeEstimator/viewTimeExp4.png"
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+julia> cput[1:6,1:4]
+6×4 Matrix{Float64}:
+  6.982   7.546   11.036   16.884
+ 11.874  20.182   28.126   44.48
+ 18.836  23.874   38.708   65.318
+ 21.914  16.058   27.206   53.368
+ 25.632  31.538   44.798   82.262
+ 56.016  75.966  106.154  192.316
+ 
+ 
