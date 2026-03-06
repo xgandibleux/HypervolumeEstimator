@@ -31,7 +31,7 @@ using HypothesisTests                    # for computing the confidence interval
 using Statistics                         # for computing the confidence interval (home version)
 using Plots                              # for drawing the figure (evolution of the avg relative error)
 
-Random.seed!(12345)
+Random.seed!(1234)
 
 include("src/instanceMO01UKP.jl")
 include("src/solveMO01UKP.jl")
@@ -63,8 +63,8 @@ println("Setup the parameters...")
 #solver = HiGHS.Optimizer
 solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
-n = 10    # number of variables
-o = 3     # number of objectives
+n = 19    # number of variables
+o = 6     # number of objectives
 
 rp = zeros(Int,o)
 listrndWeights = [(100,100), (500,500), (1000,1000), (1500,1500), (2000,2000), (5000,5000), (10000,10000)]
@@ -88,6 +88,7 @@ open(instanceName*".res", "w") do ioAll
     # =============================================================================
     println("\nGenerate an mo01UKP instance...")
     p, w, c = generate_MO01UKP(n,o)
+    #p, w, c = TamVan_MO01UKP() 
     save_instance(instanceName* ".dat", p, w, c)
 
 
@@ -127,7 +128,7 @@ open(instanceName*".res", "w") do ioAll
 
 
     # reset the random generator
-    Random.seed!(12345)
+    Random.seed!(1234)
 
     # =============================================================================
     for iWeight in 1:length(listrndWeights)
