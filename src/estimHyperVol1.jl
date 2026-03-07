@@ -148,7 +148,7 @@ end
 """
     H(p, w, c, rp=[0,0])
 
-Compute H(S,r_*) according equation (14)
+Compute H(S,r_*) 
 """
                      
 function H(solver, p,w,c, rp=[0,0], rndWeights=(100,200))
@@ -161,3 +161,21 @@ function H(solver, p,w,c, rp=[0,0], rndWeights=(100,200))
     return H, numberOfWeights
 end
 
+
+# ------------------------------------------------------------
+"""
+    Hrevised(p, w, c, rp=[0,0])
+
+Compute H(S,r_*) 
+"""
+                     
+function Hrevised(solver, p,w,c, rp, numberOfWeights) #rndWeights=(100,200))
+    #numberOfWeights = rand(rndWeights[1]:rndWeights[2])  # the number of directions λ(ψ) 
+    d = size(p,1) 
+    λ_ψ = [λ(ψ(d)) for i=1:numberOfWeights]              # a list of weights 
+    listL = L(solver, p, w, c, rp, λ_ψ)                  # Compute the optimal values of a series of Chebychev models over a random sample of λ(ψ)
+    E = sum(listL.^d)/numberOfWeights                    # Estimate $E_{ψ ∈ Ψ^+}(L(S,r_*,ψ)^d)$
+    H = 1/d * (2 * π^(d/2)) / ( gamma(d/2) * 2^d ) * E   # Compute $H(S,r_*)$ according (14)
+
+    return H, numberOfWeights, listL
+end
