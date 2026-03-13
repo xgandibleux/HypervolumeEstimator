@@ -188,22 +188,17 @@ end
 Compute H(S,r_*) 
 """
                      
-function Hrevised2(solver, p,w,c, rp, numberOfWeights) #rndWeights=(100,200))
-    #numberOfWeights = rand(rndWeights[1]:rndWeights[2])  # the number of directions λ(ψ) 
+function Hrevised2(solver, p,w,c, rp, numberOfWeights) 
+
     d = size(p,1) 
     λ_ψ = [λ(ψ(d)) for i=1:numberOfWeights]              # a list of weights 
     listL = L(solver, p, w, c, rp, λ_ψ)                  # Compute the optimal values of a series of Chebychev models over a random sample of λ(ψ)
     E = sum(listL.^d)/numberOfWeights                    # Estimate $E_{ψ ∈ Ψ^+}(L(S,r_*,ψ)^d)$
     H = 1/d * (2 * π^(d/2)) / ( gamma(d/2) * 2^d ) * E   # Compute $H(S,r_*)$ according (14)
 
-    listL_for_CI = 1/d * (2 * π^(d/2)) / ( gamma(d/2) * 2^d ) .* listL
-    avL_for_CI = average_value(listL_for_CI)
-    CIlow, CIHigh = confint( OneSampleTTest( listL_for_CI ), level=0.95, tail=:both )
+    listL_weighted = 1/d * (2 * π^(d/2)) / ( gamma(d/2) * 2^d ) .* (listL.^d)
+    avL_weighted = average_value(listL_weighted)         # = H estimated
+    CIlow, CIHigh = confint( OneSampleTTest( listL_weighted ), level=0.95, tail=:both )
 
-    #@show 1/d * (2 * π^(d/2)) / ( gamma(d/2) * 2^d )
-    #@show listL
-    #@show listL_for_CI
-    #@assert false "stop"
-
-    return H, numberOfWeights, (avL_for_CI, CIlow, CIHigh)
+    return H, numberOfWeights, (avL_weighted, CIlow, CIHigh)
 end
