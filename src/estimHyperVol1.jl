@@ -200,5 +200,25 @@ function Hrevised2(solver, p,w,c, rp, numberOfWeights)
     avL_weighted = average_value(listL_weighted)         # = H estimated
     CIlow, CIHigh = confint( OneSampleTTest( listL_weighted ), level=0.95, tail=:both )
 
-    return H, numberOfWeights, (avL_weighted, CIlow, CIHigh)
+#    return H, numberOfWeights, (avL_weighted, CIlow, CIHigh)
+    return H, numberOfWeights, (avL_weighted, CIlow, CIHigh), listL_weighted    
+end
+
+
+function Hrevised3(Hexact, solver, p,w,c, rp, numberOfWeights) 
+
+    d = size(p,1) 
+    λ_ψ = [λ(ψ(d)) for i=1:numberOfWeights]                        # a list of weights 
+
+    listL = L(solver, p, w, c, rp, λ_ψ)                            # Compute the optimal values of a series of Chebychev models over a random sample of λ(ψ)
+    E = sum(listL.^d)/numberOfWeights                              # Estimate $E_{ψ ∈ Ψ^+}(L(S,r_*,ψ)^d)$
+    H_estimated = 1/d * (2 * π^(d/2)) / ( gamma(d/2) * 2^d ) * E   # Compute $H(S,r_*)$ according (14)
+
+    listL_weighted = 1/d * (2 * π^(d/2)) / ( gamma(d/2) * 2^d ) .* (listL.^d)
+    listL_weighted_normalized = listL_weighted ./ Hexact                        # values normalized
+    H_estimated_normalized = average_value(listL_weighted_normalized)           # H estimated normalized
+
+    CIlow, CIHigh = confint( OneSampleTTest( listL_weighted_normalized ), level=0.95, tail=:both )
+
+    return H_estimated, (H_estimated_normalized, CIlow, CIHigh)   
 end

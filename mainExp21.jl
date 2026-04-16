@@ -21,7 +21,8 @@
 using Printf
 using Random
        
-using JuMP, GLPK                         # for solving MILP (I)
+#using JuMP, GLPK                         # for solving MILP (I)
+using JuMP, Gurobi
 #using HiGHS, Gurobi, CPLEX              # for solving MILP (II)
 import MultiObjectiveAlgorithms as MOA   # for computing the set of nondominated points
 using Distributions                      # for computing the weights and CI (home version)
@@ -58,11 +59,11 @@ oneExpe = resultsExpe(  [100,500,1000,1500,2000,5000,10000],
 
 # =============================================================================
 println("Setup the parameters...")
-solver = GLPK.Optimizer
+#solver = GLPK.Optimizer
 #solver = HiGHS.Optimizer
-#solver = Gurobi.Optimizer
+solver = Gurobi.Optimizer
 #solver = CPLEX.Optimizer
-n = 10    # number of variables
+n = 100    # number of variables
 o = 3     # number of objectives
 nWeights = n*o   # number of weights for the scalarizing function
 

@@ -22,7 +22,8 @@ using Printf
 using Random
 
 using MetaJul                           # for computing a good representative set of nondominated points with NSGA-II
-using JuMP, GLPK                        # for solving MILP
+#using JuMP, GLPK                       # for solving MILP
+using JuMP, Gurobi                      # for solving MILP
 #import MultiObjectiveAlgorithms as MOA  # for computing the set of nondominated points
 using Distributions                     # for computing the weights and CI (home version)
 using SpecialFunctions                  # for computing the estimation value
@@ -60,8 +61,9 @@ oneExpe = resultsExpe(  [100,500,1000,1500,2000,5000,10000],
 
 # =============================================================================
 println("Setup the parameters...")
-solver = GLPK.Optimizer
-n = 10    # number of variables
+#solver = GLPK.Optimizer
+solver = Gurobi.Optimizer
+n = 250    # number of variables
 o = 3      # number of objectives
 
 rp = zeros(Int,o)
@@ -76,6 +78,7 @@ println("  interval of #weights : ", listrndWeights)
 println("  number of trials     : ", trials)
 
 allareH̃ = (Float64)[]
+allaCPUt = (Float64)[]
 allCPUt = (Float64)[]
 
 instanceName = "kp-" * string(n) * "-" * string(o)
@@ -171,6 +174,7 @@ open(instanceName*".res", "w") do ioAll
         @printf("  CPUt for computing S         = %.2f s\n", t_elapsedS)
         @printf("  average CPUt for H̃           = %.2f s\n", avCPUt)    
         push!(allareH̃, areH̃)
+        push!(allaCPUt, avCPUt)
 
         write(ioAll, string("average value H̃             = ",avH̃, " \n"))
         write(ioAll, string("average absolue error H̃     = ",aaeH̃, " \n"))
@@ -186,6 +190,7 @@ open(instanceName*".res", "w") do ioAll
 end
 
 println("\nAll average relative error H̃ = ", allareH̃)
+println("\nAll CPUt with ", solver, " = ", allaCPUt)
 
 
 listrndWeightsX = [100,500,1000,1500,2000,5000,10000]
