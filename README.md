@@ -22,22 +22,22 @@ Follow the indications provided [here](https://lopez-ibanez.eu/hypervolume) to c
 - invoke `julia`
 - in the REPL, invoke e.g. `include("mainExp1.jl")`
 
-Tested on macBook Pro under macOS v14.6, with Julia 1.10 using packages 
-- JuMP.jl v1.26.0
+Tested on macBook Pro under macOS v14.6, with Julia 1.12 using packages 
+- JuMP.jl v1.30.0
 - GLPK.jl v1.2.1
-- MultiObjectiveAlgorithms.jl v1.4.3
-- Distributions.jl v0.25.120
-- SpecialFunctions.jl v2.5.1
-- HypothesisTests.jl v0.11.5
-- Plots.jl v1.40.14
+- MultiObjectiveAlgorithms.jl v1.10.0
+- Distributions.jl v0.25.123
+- SpecialFunctions.jl v2.7.2
+- HypothesisTests.jl v0.11.6
+- Plots.jl v1.41.6
 - MetaJul.jl v0.2.0 (https://github.com/jMetal/MetaJul)
 
 ## Setup the number of variables and the number of objectives
 Change in the code the value assigned to `n` and `o`.
 Currently `n=10` and `o=3`.
 
-## Numerical experiments available
-- Experiment 1. Given one instance, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
+## Numerical experiments available (description to improve)
+- Experiment 1. Given 20 instances, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 1 trial/7 sets of weights (from 100 to 10000 weights);
    returns $H(Y_N)$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
 - Experiment 2.1 Given one instance, compute $Y_{A_1}$ and $H(Y_{A_1})$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
    returns $H(Y_{A_1})$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
