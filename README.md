@@ -1,6 +1,6 @@
 # Hypervolume Estimator
 Algorithm for computing a consistent and unbiased estimation of the hypervolume of the set of nondominated points a priori unknown.
-For the numerical experimentation needs, the multi-objective optimization problem implemented in the current version of the code is the 01 unidimensional knapsack problem.
+For the numerical experimentation needs, the multi-objective optimization problem implemented in the current version of the code is the 01 unidimensional knapsack problem (experiments 1 to 4) and the 01 uncapacited facility location problem (experiment 5).
 
 ## Paper
 Available on [optimization-online](https://optimization-online.org/2025/09/consistent-and-unbiased-estimation-of-the-hypervolume-of-an-unknown-true-pareto-front/)
@@ -20,33 +20,43 @@ Follow the indications provided [here](https://lopez-ibanez.eu/hypervolume) to c
 - compile `hv` on your computer and move the exec file into the `src` folder 
 (on mac: make OPT_CFLAGS="-O2 -g")  
 - invoke `julia`
-- in the REPL, invoke e.g. `include("mainExp1.jl")`
+- in the REPL, enter the following command: `include("mainExp1.jl")`
 
 Tested on macBook Pro under macOS v14.6, with Julia 1.12 using packages 
-- JuMP.jl v1.30.0
-- GLPK.jl v1.2.1
-- MultiObjectiveAlgorithms.jl v1.10.0
-- Distributions.jl v0.25.123
-- SpecialFunctions.jl v2.7.2
-- HypothesisTests.jl v0.11.6
+- JuMP.jl v1.30.1
+- Gurobi v1.9.2
+- MultiObjectiveAlgorithms.jl v1.12.0
+- Distributions.jl v0.25.129
+- SpecialFunctions.jl v2.8.0
+- HypothesisTests.jl v0.11.8
 - Plots.jl v1.41.6
-- MetaJul.jl v0.2.0 (https://github.com/jMetal/MetaJul)
+- MetaJul.jl v0.3.0 (https://github.com/jMetal/MetaJul)
 
 ## Setup the number of variables and the number of objectives
 Change in the code the value assigned to `n` and `o`.
 Currently `n=10` and `o=3`.
 
-## Numerical experiments available (description to improve)
-- Experiment 1. Given 20 instances, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 1 trial/7 sets of weights (from 100 to 10000 weights);
+## Running experiment 4 with threads
+In a terminal, enter the following command: e.g. `julia --threads 8 mainExp1.jl`
+
+## Numerical experiments available
+- Experiment 1. moUKP: Given 20 instances, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 1 trial/7 sets of weights (from 100 to 10000 weights);
    returns $H(Y_N)$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
-- Experiment 2.1 Given one instance, compute $Y_{A_1}$ and $H(Y_{A_1})$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
-   returns $H(Y_{A_1})$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
-- Experiment 2.2 Given one instance, compute $Y_{A_2}$ and $H(Y_{A_2})$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
-   returns $H(Y_{A_2})$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
-- Experiment 3. Given 20 instances with $n$ and $d$ fixed, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 1 trial/1 sets of weights (2000 weights);
+- Experiment 1.bis moUKP: Given 20 instances with $n$ and $d$ fixed, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 1 trial/1 sets of weights (2000 weights);
    returns average absolute and relative error on $\tilde{H}$, average elapsed times.
-- Experiment 4. Given 1 instance with $n$ and $d$ fixed, compute the estimation $\tilde{H}$ for 1 trial/1 sets of weights (2000 weights);
+- Experiment 1.ter moUKP: Given 1 instance with $n$ and $d$ fixed, compute the estimation $\tilde{H}$ for 1 trial/1 sets of weights (2000 weights);
    returns average elapsed times.
+
+- Experiment 2.1 moUKP: Given one instance, compute $Y_{A_1}$ and $H(Y_{A_1})$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
+   returns $H(Y_{A_1})$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
+- Experiment 2.2 moUKP: Given one instance, compute $Y_{A_2}$ and $H(Y_{A_2})$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
+   returns $H(Y_{A_2})$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
+
+ - Experiment 3. moUKP: Given 3 problem configurations (10 instances each), compute $\tilde{H}$ for both reference points $r_*^0$ and $r_*^{nMin}$, same seed, 7 sets of weights (from 100 to 10000 weights); returns the normalised estimate $\tilde{H}/H_{\text{exact}}$, the relative error, and the 95\% confidence interval width, for each reference point.
+
+- Experiment 4. moUKP: Given 3 problem configurations (10 instances each), compute $\tilde{H}$ with 1 thread and with 8 threads, 50 chunks, same seed, 7 sets of weights (from 100 to 10000 weights); returns the elapsed time for each thread configuration, the normalised estimate $\tilde{H}/H_{\text{exact}}$, the 95\% confidence interval width, and the relative error.
+
+- Experiment 5. moUFLP: Given 8 problem configurations (10 instances each), compute the exact nondominated set $Y_N$ and the estimate $\tilde{H}$ with 8 threads, 7 sets of weights (from 100 to 10000 weights); returns the elapsed time for the exact computation and for the estimator, the normalised estimate $\tilde{H}/H_{\text{exact}}$, the 95\% confidence interval width, and the relative error.  
 
 ## Data and outputs
 Instances are generated on the fly (the seed is fixed to `1234`). A run displays in the terminal the results and saves on files (for exp1, exp2.1 and exp2.2)
