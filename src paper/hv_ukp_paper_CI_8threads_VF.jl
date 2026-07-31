@@ -2,7 +2,7 @@
 # Unbiased hypervolume estimator for the bi-objective 0-1 knapsack problem.
 # Parallelised version — self-contained illustration.
 #
-# Usage: julia --threads 8 hv_ukp_illustration_threaded_vf.jl
+# Usage: julia --threads 8 hv_ukp_paper_CI_8threads_VF.jl
 # =============================================================================
 
 using Random, LinearAlgebra
@@ -10,10 +10,14 @@ using JuMP, Gurobi
 using SpecialFunctions, HypothesisTests, Statistics
 using Base.Threads
 
-# ψ(ukp, rng) : random direction on the positive unit quarter-sphere
-ψ(ukp, rng) = (ϕ = abs.(randn(rng, ukp.d)); ϕ / norm(ϕ))
+# =============================================================================
+function ψ(ukp, rng::AbstractRNG = Random.default_rng())
+    ϕ = abs.(randn(rng, ukp.d))
+    ϕ = max.(ϕ, 1e-12)              # zero-coordinate guard 
+    return ϕ / norm(ϕ)
+end
 
-# λ(v) : amplification vector
+# =============================================================================
 λ(v) = 1.0 ./ v
 
 # =============================================================================

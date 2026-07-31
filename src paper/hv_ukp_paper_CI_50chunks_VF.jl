@@ -1,10 +1,9 @@
 # =============================================================================
-# Hypervolume estimation of an unknown TPF — improved and distributed version
-# (Section 4.3, revised)
+# Unbiased hypervolume estimator for the bi-objective 0-1 knapsack problem.
+# Parallel version presented in the paper
 #
-# Run:  julia --threads 8 hv_ukp_parallel_rev2.jl
+# Run:  julia --threads 8 hv_ukp_paper_CI_50chunks_VF.jl
 #
-# Requires the functions ψ, λ of the sequential version (Section 4.2, revised).
 # =============================================================================
 
 using Random, LinearAlgebra
@@ -26,11 +25,7 @@ const CHUNKSIZE = 50   # fixed, independent of the number of threads
 
 function L_threaded(ukp, rp, N)
     listL = Vector{Float64}(undef, N)
-    chunks = collect(
-                Iterators.partition( 1:N,
-                    CHUNKSIZE
-                )
-             )
+    chunks = collect( Iterators.partition( 1:N, CHUNKSIZE ) )
 
     Threads.@threads for chunk_id in eachindex(chunks)
         rng = MersenneTwister(1234 + chunk_id)          # one RNG per chunk
@@ -65,8 +60,8 @@ function H(ukp, rp, N, Hexact)
     coeff = 1/ukp.d * (2 * π^(ukp.d/2)) / (gamma(ukp.d/2) * 2^ukp.d)
     H_est = coeff * sum(l^ukp.d for l in list_L) / N
     lw_norm = coeff / Hexact .* [l^ukp.d for l in list_L]
-    CIlow, CIhigh = confint(OneSampleTTest(lw_norm), level=0.95, tail=:both)
-    return H_est, (mean(lw_norm), CIlow, CIhigh)
+    CIl, CIh = confint(OneSampleTTest(lw_norm), level=0.95, tail=:both)
+    return H_est, (mean(lw_norm), CIl, CIh)
 end
 
 # --- Entry point: didactic instance (Section 4.1) ----------------------------
@@ -86,14 +81,13 @@ function main()
     N = 500              # number of directions
 
     start = time()
-    H_est, (H_norm, CIlow, CIhigh) = H(ukp, rp, N, Hexact)
+    H_est, (H_norm, CIl, CIh) = H(ukp, rp, N, Hexact)
     elapsed = round(time() - start, digits=2)
 
     println("threads                = ", Threads.nthreads())
     println("H estimated            = ", round(H_est, digits=2))
     println("H estimated normalized = ", round(H_norm, digits=5))
-    println("CI 95%                 = [", round(CIlow, digits=5),
-            " ; ", round(CIhigh, digits=5), "]")
+    println("CI 95%                 = [", round(CIl, digits=5), " ; ", round(CIh, digits=5), "]")
     println("relative error         = ", round(abs(1 - H_norm), digits=5))
     println("elapsed (s)            = ", elapsed)
 end
