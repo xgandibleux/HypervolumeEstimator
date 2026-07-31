@@ -12,6 +12,16 @@ Published: 2025/09/03*
 ## Note
 The codes have evolved as work on the paper progressed. A refactoring is currently underway. As it currently stands, the `Expe_1_2` folder contains the code corresponding to the results of Experiments 1 and 2 in the paper. The same applies to the `Expe_3_4_5` folder and Experiments 3, 4, and 5.
 
+## Project structure
+
+```
+HypervolumeEstimator/
+├── expe_1_2              # UKP experiments 1 and 2
+├── expe_3_4_5            # UKP experiments 3 and 4, UFLP experiment 5
+├── src paper.            # codes discussed in the paper
+├── src HV                # codes for computing the hypervolume indicator
+```
+
 ## Numerical experiments available
 - **Experiment 1. moUKP:** Given 20 instances, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 1 trial/7 sets of weights (from 100 to 10000 weights);
    returns $H(Y_N)$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
