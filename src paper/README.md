@@ -1,10 +1,10 @@
-## Sequential and parallel codes discussed in the paper
+## Sequential and parallel codes on moUKP discussed in the paper
 
-#### Sequential version
+#### • Sequential version
 
 Run in a terminal: `julia hv_ukp_paper_CI_sequentiel.jl`
 
-#### Parallel version (50 chunks)
+#### • Parallel version (50 chunks)
 
 Run in a terminal: `julia --threads 8 hv_ukp_paper_CI_50chunks_VF.jl`
 
