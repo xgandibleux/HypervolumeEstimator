@@ -1,25 +1,27 @@
 # Hypervolume Estimator
 Algorithm for computing a consistent and unbiased estimation of the hypervolume of the set of nondominated points a priori unknown.
-For the numerical experimentation needs, the multi-objective optimization problem implemented in the current version of the code is the 01 unidimensional knapsack problem (experiments 1 to 4) and the 01 uncapacited facility location problem (experiment 5). Gurobi is used as MIP solver, and HV for computing the hypervolume indicator.
+For the numerical experimentation needs, the multi-objective optimization problems implemented in the current version of the code are the 01 unidimensional knapsack problem (moUKP) for experiments 1 to 4, and the 01 uncapacited facility location problem (moUFLP) for experiment 5. Gurobi is used as MIP solver, and HV for computing the hypervolume indicator.
 
 
-## Paper
+## Technical report
 Available on [optimization-online](https://optimization-online.org/2025/09/consistent-and-unbiased-estimation-of-the-hypervolume-of-an-unknown-true-pareto-front/)
 
 Citate this work: *Consistent and unbiased estimation of the hypervolume of an unknown true Pareto front. Xavier Gandibleux and Andrzej Jaszkiewicz. Optimization-online.
 Published: 2025/09/03*
 
 ## Note
-The codes have evolved as work on the paper progressed. A refactoring is currently underway. As it currently stands, the `Expe_1_2` folder contains the code corresponding to the results of Experiments 1 and 2 in the paper. The same applies to the `Expe_3_4_5` folder and Experiments 3, 4, and 5.
+The codes have evolved as work on the paper progressed. A refactoring is currently underway. As it currently stands, the `Expe_1_2` folder contains the codes corresponding to the results of Experiments 1 and 2 in the paper. The same applies to the `Expe_3_4_5` folder and Experiments 3, 4, and 5.
 
 ## Project structure
 
 ```
 HypervolumeEstimator/
-├── expe_1_2              # UKP experiments 1 and 2
-├── expe_3_4_5            # UKP experiments 3 and 4, UFLP experiment 5
-├── src paper.            # codes discussed in the paper
-├── src HV                # codes for computing the hypervolume indicator
+├── src_Codes_paper       # codes discussed in the paper
+├── src_HV                # code for computing the hypervolume indicator
+├── src_Expe_1_2          # codes for moUKP experiments 1 and 2
+├── src_Expe_3_4_5        # codes for moUKP experiments 3 and 4, moUFLP experiment 5
+├── raw_Results           # raw results collected during numerical experiments
+└── archive               # old versions of the code and results (folder to be deleted later)
 ```
 
 ## Numerical experiments available
