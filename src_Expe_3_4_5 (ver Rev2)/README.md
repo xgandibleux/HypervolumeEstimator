@@ -7,28 +7,46 @@ with multi-threaded parallelisation.
 ## Project structure
 
 ```
-HVfinal/
-├── mainExp1_UKP.jl       # entry point — UKP experiment
-├── mainExp1_UFLP.jl      # entry point — UFLP experiment
-├── build_lib.sh          # compile fpli_hv shared library (macOS / Linux)
-├── build_lib.bat         # compile fpli_hv shared library (Windows / MinGW-w64)
-└── src/
-    ├── common.jl         # shared functions (ψ!, λ!)
-    ├── instance_UKP.jl   # UKP instance structure and generators
-    ├── instanceUFLP.jl   # UFLP instance structure and generators
-    ├── solve_UKP.jl      # exact UKP solver (MOA / Tamby-Vanderpooten)
-    ├── solveUFLP.jl      # exact UFLP solver (MOA / Tamby-Vanderpooten)
-    ├── estimHyperVol_UKP.jl   # hypervolume estimator — UKP
-    ├── estimHyperVol_UFLP.jl  # hypervolume estimator — UFLP
-    ├── files.jl          # I/O and hypervolume measurement (@ccall to fpli_hv)
-    ├── analyze.jl        # statistical utilities
-    └── src HV/hv-1.3-src/    # C source of the fpli_hv library
+src_Expe_3_4_5 (ver Rev2)/
+├── mainExp1_UKP.jl                         # (Refactoring of Expe 1 in progress)
+├── mainExp1_UKP_10obj_7weights.jl          # (a variant of the refactoring of Expe 1 in progress)
+├── mainExp1_UKP_large.jl                   # (a variant of the refactoring of Expe 1 in progress)
+├── mainExp3_rp_comparison.jl               # entry point — experiment 3 (reference point comparison)
+├── mainExp4_8threads_comparison.jl         # (a variant of Expe 4 with 8 threads=chunks)
+├── mainExp4_50chunks_comparison-revT.jl    # entry point — experiment 4 (50 chunks, thread comparison)
+├── mainExp5_8threads_UFLP.jl               # (a variant of Expe 5 with 8 threads=chunks)
+├── mainExp5_50chunks_UFLP-revT.jl          # entry point — experiment 5, UFLP with 50 chunks
+├── build_lib.sh                            # compile fpli_hv shared library (macOS / Linux)
+├── build_lib.bat                           # compile fpli_hv shared library (Windows / MinGW-w64)
+├── .gitignore
+├── README.md
+├── src/
+│   ├── analyze.jl                          # statistical utilities
+│   ├── common.jl                           # shared functions
+│   ├── common-revT.jl                      # shared functions (revT variant)
+│   ├── common-revT v0.jl.                  # (old version)
+│   ├── computeCI.jl                        # confidence interval computation
+│   ├── estimHyperVol_UFLP.jl               # hypervolume estimator — moUFLP
+│   ├── estimHyperVol_UFLP-revT.jl          # hypervolume estimator — moUFLP (revT variant)
+│   ├── estimHyperVol_UKP.jl                # hypervolume estimator — moUKP
+│   ├── estimHyperVol_UKP-revT.jl           # hypervolume estimator — moUKP (revT variant)
+│   ├── estimHyperVol_UKP-revT v0.jl        # (old version)
+│   ├── estimHyperVol_UKP_nonorm.jl         # hypervolume estimator — moUKP (non-normalised variant)
+│   ├── files.jl                            # I/O and hypervolume measurement (@ccall to fpli_hv)
+│   ├── hv                                  # compiled hypervolume executable
+│   ├── instanceUFLP.jl                     # moUFLP instance structure and generators
+│   ├── instance_UKP.jl                     # moUKP instance structure and generators
+│   ├── libfpli_hv.dylib                    # compiled fpli_hv shared library (macOS)
+│   ├── solveUFLP.jl                        # exact moUFLP solver
+│   ├── solve_UKP.jl                        # exact moUKP solver
+│   └── .gitignore
+└── src HV/hv-1.3-src/                      # C source of the fpli_hv library
 ```
 
 ## Prerequisites
 
 - **Julia** ≥ 1.9 with the following packages:
-  `JuMP`, `HiGHS`, `MultiObjectiveAlgorithms`, `Distributions`,
+  `JuMP`, `Gurobi`, `MultiObjectiveAlgorithms`, `Distributions`,
   `SpecialFunctions`, `HypothesisTests`, `Statistics`, `Plots`
 - A **C compiler** to build the `fpli_hv` shared library (see below)
 
@@ -88,7 +106,6 @@ Edit the parameters at the top of each entry point:
 | Number of objectives | `o` | `o` |
 | Number of instances | `nInstances` | `nInstances` |
 | MIP solver | `solver` | `solver` |
-| Estimator strategy | `solver_fn` | — |
 
 ## Output files
 
