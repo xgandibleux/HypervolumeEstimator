@@ -16,12 +16,12 @@ The codes have evolved as work on the paper progressed. A refactoring is current
 
 ```
 HypervolumeEstimator/
-├── src_Codes_paper       # codes discussed in the paper
-├── src_HV                # code for computing the hypervolume indicator
-├── src_Expe_1_2          # codes for moUKP experiments 1 and 2
-├── src_Expe_3_4_5        # codes for moUKP experiments 3 and 4, moUFLP experiment 5
-├── raw_Results           # raw results collected during numerical experiments
-└── archive               # old versions of the code and results (folder to be deleted later)
+├── src_Codes_paper              # codes discussed in the paper
+├── src_HV                       # code for computing the hypervolume indicator
+├── src_Expe_1_2 (ver Rev1)      # codes for moUKP experiments 1 and 2
+├── src_Expe_3_4_5 (ver Rev2)    # codes for moUKP experiments 3 and 4, moUFLP experiment 5
+├── raw_results                  # raw results collected during numerical experiments
+└── archive                      # old versions of the code and results (folder to be deleted later)
 ```
 
 ## Numerical experiments available
