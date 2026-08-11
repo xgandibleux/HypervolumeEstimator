@@ -27,10 +27,12 @@ HypervolumeEstimator/
 ## Numerical experiments available
 - **Experiment 1. moUKP:** Given 20 instances, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 1 trial/7 sets of weights (from 100 to 10000 weights);
    returns $H(Y_N)$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
-- **Experiment 1.bis moUKP:** Given 20 instances with $n$ and $d$ fixed, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 1 trial/1 sets of weights (2000 weights);
+- **Experiment 1.b moUKP:** Given 20 instances with $n$ and $d$ fixed, compute $Y_N$ and $H(Y_N)$ vs estimation $\tilde{H}$ for 1 trial/1 sets of weights (2000 weights);
    returns average absolute and relative error on $\tilde{H}$, average elapsed times.
-- **Experiment 1.ter moUKP:** Given 1 instance with $n$ and $d$ fixed, compute the estimation $\tilde{H}$ for 1 trial/1 sets of weights (2000 weights);
+- **Experiment 1.c moUKP:** Given 1 instance with $n$ and $d$ fixed, compute the estimation $\tilde{H}$ for 1 trial/1 sets of weights (2000 weights);
    returns average elapsed times.
+- **Experiment 1.d moUKP:** Given 1 instance with $n=10000$ and $d=10$, compute the estimation $\tilde{H}$ for 5 trial/7 sets of weights (from 100 to 10000 weights);
+   returns average absolute and relative error on $\tilde{H}$, average elapsed times.  
 
 - **Experiment 2.1 moUKP:** Given one instance, compute $Y_{A_1}$ and $H(Y_{A_1})$ vs estimation $\tilde{H}$ for 20 trials/7 sets of weights (from 100 to 10000 weights);
    returns $H(Y_{A_1})$, the average absolute and relative error on $\tilde{H}$, interval confidence of value 95%, elapsed times.
