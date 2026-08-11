@@ -42,8 +42,33 @@ mutable struct resultsExpe_large
     CIlowLw   :: Vector{Float64}
 end
 
-
 function plot_valuesCI_large(oneExpe::resultsExpe_large, res_H̃, weights)
+    nRuns     = size(res_H̃, 1)
+    yerr_low  = oneExpe.avH̃ .- oneExpe.CIlowLw
+    yerr_high = oneExpe.CIhightLw .- oneExpe.avH̃
+
+    # plot individual runs first (behind the average curve)
+    p = scatter(weights, res_H̃[1, :],
+        label  = "Individual H estimated",
+        color  = :blue, alpha = 0.75, marker = :hline, ms = 6, markerstrokewidth = 1,
+        xticks = (weights, string.(weights)), xrotation = 45)
+    for iRun in 2:nRuns
+        scatter!(p, weights, res_H̃[iRun, :],
+            label = "", color = :blue, alpha = 0.75, marker = :hline, ms = 6, markerstrokewidth = 1)
+    end
+
+    # overlay average curve with CI bars
+    plot!(p, weights, oneExpe.avH̃, yerror = (yerr_low, yerr_high),
+        label  = "Average H estimated ± average CI",
+        lw = 2, marker = :circle, ms = 5, color = :red)
+
+    xlabel!("Number of weight vectors/iterations")
+    ylabel!("H estimated (raw)")
+    title!(string(n) * " variables | " * string(o) * " objectives")
+    return p
+end
+
+function plot_valuesCI_large0(oneExpe::resultsExpe_large, res_H̃, weights)
     nRuns = size(res_H̃, 1)
 
     # plot individual runs first (behind the average curve)
@@ -116,7 +141,7 @@ instanceName = "ukp-large-" * string(n) * "-" * string(o)
 
 # =============================================================================
 # Generate ONE fixed instance
-Random.seed!(1234)
+Random.seed!(12345)
 inst = generate_MO01UKP(n, o)
 rp   = (rp_mode == :LB) ? reference_point_LB(inst) : zeros(Int, o)
 println("\nFixed instance generated.")
@@ -148,7 +173,8 @@ open(instanceName * ".res", "w") do ioAll
 
             startH = time()
             H̃, (mean_lw, CIlo, CIhi) = Hrevised3_nonorm(solver, inst, rp,
-                                                           nbrWeights, iRun)
+                                                           nbrWeights, iRun * 1234567)            
+                                                    #       nbrWeights, rand(1:typemax(Int)))#iRun)
             t_elapsedH = round(time() - startH, digits=2)
 
             @printf("  weights = %5d  H_est = %1.6e  CI 95%% = [%1.6e, %1.6e]  t = %.2f s\n",
